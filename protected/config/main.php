@@ -28,11 +28,20 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
                 'usuario',
+                'aula',
 		
 	),
 
 	// application components
 	'components'=>array(
+            
+                'authManager'=>array(
+                    "class"=>"CDbAuthManager",
+                    "connectionID"=>"db",
+                    'itemTable'=>'authitem_permiso_usuario', // Tabla que contiene los elementos de autorizacion rol_institucion
+                    'assignmentTable'=>'authassignment_usuario', // Tabla que contiene la asignacion usuario_rol_administrador
+                    'itemChildTable'=>'authitemchild_usuario', // Tabla que contiene los elementos padre-hijo                    
+                ),
 
 		'user'=>array(
 			// enable cookie-based authentication
