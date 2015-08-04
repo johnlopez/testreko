@@ -116,4 +116,11 @@ class EscritorioUsuario extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function getPermisoUsuario($nuevo_usuario_id) {
+            
+             $comando = Yii::app()->db->createCommand("CALL sp_escritorio_usuario_get_permiso_usuario(:nuevo_usuario_id)");
+             $comando->bindParam(':nuevo_usuario_id',$nuevo_usuario_id);
+             return $comando->queryAll();
+        }
 }

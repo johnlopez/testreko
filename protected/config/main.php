@@ -30,6 +30,7 @@ return array(
 		),
                 'usuario',
                 'aula',
+                'repositorio',
                 'escritorio_usuario',
 
 		

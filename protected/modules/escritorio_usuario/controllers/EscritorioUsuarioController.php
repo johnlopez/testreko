@@ -24,12 +24,16 @@ class EscritorioUsuarioController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+//        public function accessRules()
+//	{
+//            return Yii::app()->Validar->validarAcceso();
+//	}
+        public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('index','view','asignar'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +41,7 @@ class EscritorioUsuarioController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -122,10 +126,14 @@ class EscritorioUsuarioController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('EscritorioUsuario');
+                $dataProvider=new CActiveDataProvider('EscritorioUsuario');
+                $permiso = new EscritorioUsuario();
+                $vpermiso = $permiso->getPermisoUsuario(Yii::app()->user->getId());                
+                
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-		));
+                        'vpermiso'=>$vpermiso,
+		));                
 	}
 
 	/**
