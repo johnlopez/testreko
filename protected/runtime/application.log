@@ -790,3 +790,378 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/testreko/themes/metroui/favicon.ico
 ---
+2015/08/06 19:22:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/favicon.ico
+---
+2015/08/07 13:11:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/favicon.ico
+---
+2015/08/10 13:23:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/favicon.ico
+---
+2015/08/10 14:14:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/dis...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/diseno/index
+HTTP_REFERER=http://localhost/testreko/repositorio/
+---
+2015/08/10 14:29:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('troncal')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/dis...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/diseno/troncal
+HTTP_REFERER=http://localhost/testreko/repositorio/diseno/index
+---
+2015/08/10 14:29:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/favicon.ico
+---
+2015/08/10 14:30:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/favicon.ico
+---
+2015/08/10 15:25:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncaladmin/admin
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncaladmin/index
+---
+2015/08/10 15:43:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/9e5e8f07/gridview/asignar.png".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9e5e8f07...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/assets/9e5e8f07/gridview/asignar.png
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncaladmin/admin
+---
+2015/08/10 15:43:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/9e5e8f07/gridview/asignar.png".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9e5e8f07...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/assets/9e5e8f07/gridview/asignar.png
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncaladmin/admin
+---
+2015/08/10 15:49:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncaladmin/admin
+---
+2015/08/10 15:49:44 [error] [php] include(ModeloAprendizaje.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAdminController.php(181): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): RepositorioTroncalAdminController->actionAsignarmodeloaprendizaje()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): RepositorioTroncalAdminController->runAction()
+#4 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): RepositorioTroncalAdminController->filterAccessControl()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(265): RepositorioTroncalAdminController->runActionWithFilters()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): RepositorioTroncalAdminController->run()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAdminController.php (181)
+in C:\wamp\www\testreko\index.php (13)
+2015/08/10 15:51:37 [error] [exception.CException] exception 'CException' with message 'RepositorioTroncalAdmin and its behaviors do not have a method or closure named "asignarModeloAprendizajeRepositorioTroncalAdmin".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('asignarModeloAp...', Array)
+#1 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAdminController.php(189): CActiveRecord->__call('asignarModeloAp...', Array)
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAdminController.php(189): RepositorioTroncalAdmin->asignarModeloAprendizajeRepositorioTroncalAdmin('1', '1')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): RepositorioTroncalAdminController->actionAsignarmodeloaprendizaje()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1
+---
+2015/08/10 16:05:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/admin
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/index
+---
+2015/08/10 16:06:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/admin
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/index
+---
+2015/08/10 16:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin_repositor...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/admin_repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/admin
+---
+2015/08/10 16:11:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin_repositor...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/admin_repositorio/repositoriotroncaladmin/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/admin
+---
+2015/08/10 16:11:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/admin
+---
+2015/08/10 16:11:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/admin
+---
+2015/08/10 16:11:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/admin
+---
+2015/08/10 16:18:34 [error] [exception.CException] exception 'CException' with message 'RepositorioTroncalApp and its behaviors do not have a method or closure named "asignarModeloAprendizajeRepositorioTroncalAdmin".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('asignarModeloAp...', Array)
+#1 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): CActiveRecord->__call('asignarModeloAp...', Array)
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): RepositorioTroncalApp->asignarModeloAprendizajeRepositorioTroncalAdmin('1', '1')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): RepositorioTroncalAppController->actionAsignarmodeloaprendizaje()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+---
+2015/08/10 16:20:36 [error] [exception.CException] exception 'CException' with message 'RepositorioTroncalApp and its behaviors do not have a method or closure named "asignarModeloAprendizajeRepositorioTroncalAdmin".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('asignarModeloAp...', Array)
+#1 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): CActiveRecord->__call('asignarModeloAp...', Array)
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): RepositorioTroncalApp->asignarModeloAprendizajeRepositorioTroncalAdmin('1', '1')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): RepositorioTroncalAppController->actionAsignarmodeloaprendizaje()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+---
+2015/08/10 16:21:04 [error] [exception.CException] exception 'CException' with message 'RepositorioTroncalApp and its behaviors do not have a method or closure named "asignarModeloAprendizajeRepositorioTroncalAdmin".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('asignarModeloAp...', Array)
+#1 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): CActiveRecord->__call('asignarModeloAp...', Array)
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): RepositorioTroncalApp->asignarModeloAprendizajeRepositorioTroncalAdmin('1', '3')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): RepositorioTroncalAppController->actionAsignarmodeloaprendizaje()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+---
+2015/08/10 16:21:08 [error] [exception.CException] exception 'CException' with message 'RepositorioTroncalApp and its behaviors do not have a method or closure named "asignarModeloAprendizajeRepositorioTroncalAdmin".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('asignarModeloAp...', Array)
+#1 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): CActiveRecord->__call('asignarModeloAp...', Array)
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositorioTroncalAppController.php(188): RepositorioTroncalApp->asignarModeloAprendizajeRepositorioTroncalAdmin('1', '3')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): RepositorioTroncalAppController->actionAsignarmodeloaprendizaje()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('asignarmodeloap...')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+HTTP_REFERER=http://localhost/testreko/repositorio/repositoriotroncalapp/asignarmodeloaprendizaje/id/1
+---
+2015/08/10 16:27:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/mod...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/modeloaprendizaje/admin
+HTTP_REFERER=http://localhost/testreko/repositorio/modeloaprendizaje/index
+---
