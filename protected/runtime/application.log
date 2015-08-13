@@ -1189,3 +1189,273 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/testreko/themes/metroui/favicon.ico
 ---
+2015/08/13 20:39:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/repositorio
+---
+2015/08/13 20:39:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/
+---
+2015/08/13 20:39:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:39:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/
+---
+2015/08/13 20:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:39:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/testreko...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:41:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('testreko/escrit...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:42:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:43:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/escritorio_usuario/escritoriousuario/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/
+---
+2015/08/13 20:43:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/escritorio_usuario/escritoriousuario/index
+---
+2015/08/13 20:43:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/
+---
+2015/08/13 20:44:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/aula".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/aula
+HTTP_REFERER=http://localhost/testreko/repositorio
+---
+2015/08/13 20:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/aula".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/aula
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/aula
+---
+2015/08/13 20:44:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/aula".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/aula
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/aula
+---
+2015/08/13 20:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/repositorio".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/repositorio
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/aula
+---
+2015/08/13 20:44:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/aula".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/aula
+HTTP_REFERER=http://localhost/testreko/themes/metroui/testreko/repositorio
+---
+2015/08/13 20:45:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/repositorio".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/repositorio
+HTTP_REFERER=http://localhost/testreko/
+---
+2015/08/13 20:45:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/testreko/aula".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/testreko/aula
+HTTP_REFERER=http://localhost/testreko/
+---
