@@ -1571,3 +1571,173 @@ Stack trace:
 REQUEST_URI=/testreko/site/login
 HTTP_REFERER=http://localhost/testreko/
 ---
+2015/08/14 17:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/css/metro.css".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/css/metro.css
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/index
+---
+2015/08/14 17:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/css/metro-icons.css".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/css/metro-icons.css
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/index
+---
+2015/08/14 17:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/jquery-2.1.3.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/index
+---
+2015/08/14 17:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/metro.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/metro.js
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/index
+---
+2015/08/14 17:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/ga.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/ga.js
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/index
+---
+2015/08/14 17:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/images/reko.png".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/images/reko.png
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/index
+---
+2015/08/14 17:34:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/favicon.ico
+---
+2015/08/14 17:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/css/metro.css".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/css/metro.css
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/localhost/localhost/localhost/localhost/localhost/testreko
+---
+2015/08/14 17:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/css/metro-icons.css".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/css/metro-icons.css
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/localhost/localhost/localhost/localhost/localhost/testreko
+---
+2015/08/14 17:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/metro.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/metro.js
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/localhost/localhost/localhost/localhost/localhost/testreko
+---
+2015/08/14 17:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/jquery-2.1.3.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/localhost/localhost/localhost/localhost/localhost/testreko
+---
+2015/08/14 17:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/ga.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/ga.js
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/localhost/localhost/localhost/localhost/localhost/testreko
+---
+2015/08/14 17:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/images/reko.png".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/images/reko.png
+HTTP_REFERER=http://localhost/testrekoadministracion/escritorio_administrador/escritorioadministrador/localhost/localhost/localhost/localhost/localhost/testreko
+---
+2015/08/14 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/metro.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/metro.js
+HTTP_REFERER=http://localhost/testrekoadministracion/
+---
+2015/08/14 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/ga.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/ga.js
+HTTP_REFERER=http://localhost/testrekoadministracion/
+---
+2015/08/14 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/css/metro-icons.css".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/css/metro-icons.css
+HTTP_REFERER=http://localhost/testrekoadministracion/
+---
+2015/08/14 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/js/jquery-2.1.3.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/testrekoadministracion/
+---
+2015/08/14 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/css/metro.css".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/css/metro.css
+HTTP_REFERER=http://localhost/testrekoadministracion/
+---
+2015/08/14 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui-bootstrap/images/reko.png".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui-...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui-bootstrap/images/reko.png
+HTTP_REFERER=http://localhost/testrekoadministracion/
+---
