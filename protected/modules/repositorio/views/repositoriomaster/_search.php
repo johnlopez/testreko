@@ -1,6 +1,6 @@
 <?php
-/* @var $this RepositorioTroncalAppController */
-/* @var $model RepositorioTroncalApp */
+/* @var $this RepositoriomasterController */
+/* @var $model RepositorioMaster */
 /* @var $form CActiveForm */
 ?>
 
@@ -42,8 +42,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'modelo_aprendizaje_id'); ?>
-		<?php echo $form->textField($model,'modelo_aprendizaje_id'); ?>
+		<?php echo $form->label($model,'modelo_aprendizaje_master_id'); ?>
+		<?php echo $form->textField($model,'modelo_aprendizaje_master_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'secuencia_master_id'); ?>
+		<?php echo $form->textField($model,'secuencia_master_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'repositorio_master_id'); ?>
+		<?php echo $form->textField($model,'repositorio_master_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'tipo_repositorio_master_id'); ?>
+		<?php echo $form->textField($model,'tipo_repositorio_master_id'); ?>
 	</div>
 
 	<div class="row buttons">

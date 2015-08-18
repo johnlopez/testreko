@@ -1,6 +1,6 @@
 <?php
-/* @var $this ModeloAprendizajeController */
-/* @var $data ModeloAprendizaje */
+/* @var $this RepositoriomasterController */
+/* @var $data RepositorioMaster */
 ?>
 
 <div class="view">
@@ -29,5 +29,23 @@
 	<?php echo CHtml::encode($data->fecha_creacion); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('modelo_aprendizaje_master_id')); ?>:</b>
+	<?php echo CHtml::encode($data->modelo_aprendizaje_master_id); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('secuencia_master_id')); ?>:</b>
+	<?php echo CHtml::encode($data->secuencia_master_id); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('repositorio_master_id')); ?>:</b>
+	<?php echo CHtml::encode($data->repositorio_master_id); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('tipo_repositorio_master_id')); ?>:</b>
+	<?php echo CHtml::encode($data->tipo_repositorio_master_id); ?>
+	<br />
+
+	*/ ?>
 
 </div>

@@ -1,15 +1,15 @@
 <?php
-/* @var $this ModeloAprendizajeController */
-/* @var $model ModeloAprendizaje */
+/* @var $this RepositoriomasterController */
+/* @var $model RepositorioMaster */
 
 $this->breadcrumbs=array(
-	'Modelo Aprendizajes'=>array('index'),
+	'Repositorio Masters'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List ModeloAprendizaje', 'url'=>array('index')),
-	
+	array('label'=>'List RepositorioMaster', 'url'=>array('index')),
+	array('label'=>'Create RepositorioMaster', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#modelo-aprendizaje-grid').yiiGridView('update', {
+	$('#repositorio-master-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Modelo Aprendizajes</h1>
+<h1>Manage Repositorio Masters</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -41,7 +41,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'modelo-aprendizaje-grid',
+	'id'=>'repositorio-master-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
@@ -51,9 +51,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'fecha_acceso',
 		'fecha_modificacion',
 		'fecha_creacion',
+		/*
+		'modelo_aprendizaje_master_id',
+		'secuencia_master_id',
+		'repositorio_master_id',
+		'tipo_repositorio_master_id',
+		*/
 		array(
 			'class'=>'CButtonColumn',
-                        'template' => '{view}',
 		),
 	),
 )); ?>
