@@ -71,9 +71,9 @@
                 <a class="place-left" href="#" title="">
                     <h1 class="tile-area-title">            
                         
-                        <a href="http://localhost/testreko/escritorio_usuario/escritoriousuario/index" >
+                        <a href="<?php echo Yii::app()->getBaseUrl(); ?>/escritorio_usuario/escritoriousuario/index" >
                             <div class="mif-music  mif-ani-shuttle mif-ani-slow" style="color: transparent; width: 80px; height:80px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; background-image: url(<?php echo Yii::app()->theme->baseUrl; ?>/images/reko.png); background-size: cover; background-repeat: no-repeat;"></div>
-                            <a  href="http://localhost/testreko/" title="">
+                            <a  href="<?php echo Yii::app()->getBaseUrl(); ?>/" title="">
                                 <h1>REKO</h1>
                             </a>
                         </a>                        
@@ -84,7 +84,7 @@
 
             <div class="main-menu-wrapper">
                 <ul class="horizontal-menu" style="margin-left: -20px">
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="<?php echo Yii::app()->getBaseUrl(); ?>/escritorio_usuario/escritoriousuario/index">Inicio</a></li>
                     <li><a href="#">Tutoriales</a></li>
                     <li><a href="#">Soporte Tecnico</a></li>
                     <li><a href="#">Novedades</a></li>
@@ -105,8 +105,8 @@
                     <li class="place-right">
                         <a href="#" class="dropdown-toggle">Aplicaciones</a>
                         <ul class="d-menu place-right" data-role="dropdown">
-                            <li><a href="http://localhost/testreko/repositorio">Repositorio</a></li>
-                            <li><a href="http://localhost/testreko/aula">Aula</a></li>
+                            <li><a href="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio">Repositorio</a></li>
+                            <li><a href="<?php echo Yii::app()->getBaseUrl(); ?>/aula">Aula</a></li>
                             
                         </ul>
                     </li>
@@ -123,18 +123,7 @@
                             <div class="brand padding10">
                                 <h3 class="fg-white">Adverts</h3>
                                 <!-- Google adsense block -->
-                                <div><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1632668592742327" data-ad-slot="8347181909" data-ad-format="auto"></ins></div>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                                <!-- End of gad block -->
-                                <!-- Google adsense block -->
-                                <br />
-                                <br />
-                                <div><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1632668592742327" data-ad-slot="8347181909" data-ad-format="auto"></ins></div>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
+                                
                                 <!-- End of gad block -->
                             </div>
                         </div>

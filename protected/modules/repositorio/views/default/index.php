@@ -5,15 +5,14 @@ $this->breadcrumbs=array(
 	$this->module->id,
 );
 ?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
+<h1>Repositorio</h1>
 
 <div class="main-content clear-float">
     <div class="tile-area no-padding">
         <div class="tile-group no-margin no-padding" style="width: 100%">
-            <h3 class="fg-blue text-light margin5">SPORT <span class="mif-chevron-right mif-2x" style="vertical-align: top !important;"></span></h3>
             
-            <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/";?>" >
-                <div class="tile-large bg-steel fg-white" data-role="tile">
+            <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/diseno/index";?>" >
+                <div class="tile-wide bg-darkBrown fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-flow-tree"></span>
                     </div>
@@ -28,7 +27,7 @@ $this->breadcrumbs=array(
                 </div>  
             </a>
             <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/";?>" >
-                    <div class="tile-large bg-teal fg-white" data-role="tile">
+                    <div class="tile-wide bg-brown fg-white" data-role="tile">
                         <div class="tile-content iconic">
                             <span class="icon mif-tools"></span>
                         </div>
@@ -43,7 +42,7 @@ $this->breadcrumbs=array(
                     </div>  
             </a>
             <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/";?>" >
-                <div class="tile-large bg-green fg-white" data-role="tile">
+                <div class="tile-wide bg-olive fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-checkmark"></span>
                     </div>
