@@ -1829,12 +1829,19 @@ Stack trace:
 REQUEST_URI=/testreko/themes/metroui/favicon.ico
 >>>>>>> d612ea45c3c1490609bd44a4234ba0178e5f8d92
 ---
+<<<<<<< HEAD
 2015/08/31 16:29:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+=======
+2015/08/24 13:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/favicon.ico".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+>>>>>>> 3e6734e6e2cf912329871af646db5500598db579
 Stack trace:
 #0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
 #1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\wamp\www\testreko\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/testreko/themes/metroui/favicon.ico
+<<<<<<< HEAD
 HTTP_REFERER=http://localhost/testreko/
+=======
+>>>>>>> 3e6734e6e2cf912329871af646db5500598db579
 ---
