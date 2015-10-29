@@ -59,6 +59,7 @@ return array(
 		'urlManager'=>array(
                         'showScriptName'=>false,
 			'urlFormat'=>'path',
+			'caseSensitive'=>true,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
@@ -89,6 +90,10 @@ return array(
 				),
 				*/
 			),
+		),
+		
+		'request' => array(
+            'baseUrl' => '/rekotest/testreko',
 		),
 
 	),
