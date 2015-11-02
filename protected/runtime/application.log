@@ -1969,3 +1969,677 @@ HTTP_REFERER=http://local/rekotest/testreko/gii/crud/index
 2015/10/23 16:01:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testreko.herramienta_foro' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `herramienta_foro`.
 in C:\wamp\www\rekotest\testreko\index.php (13)
 >>>>>>> a94e37737e8b0367d3034e4a690c8bf66f5d9a40
+2015/10/29 19:51:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "repositorio/institucion/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/ins...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/repositorio/institucion/index
+HTTP_REFERER=http://localhost/testreko/repositorio
+---
+2015/10/29 20:03:16 [error] [php] Undefined variable: usuario (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:137)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (137)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/29 20:04:27 [error] [php] Undefined variable: usuario (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:137)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (137)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/29 20:05:51 [error] [php] Undefined variable: usuario (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:137)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (137)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/29 20:05:57 [error] [php] Undefined variable: usuario (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:137)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (137)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/29 20:09:41 [error] [php] Undefined variable: institution (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:133)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (133)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/29 20:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.foundation.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.foundation.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.bootstrap.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.bootstrap.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.bootstrap.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.bootstrap.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.foundation.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.foundation.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.jqueryui.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.jqueryui.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.jqueryui.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.jqueryui.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/jquery.dataTables.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/jquery.dataTables.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/jquery.dataTables.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/jquery.dataTables.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.foundation.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.foundation.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.foundation.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.foundation.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.bootstrap.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.bootstrap.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.bootstrap.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.bootstrap.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.jqueryui.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.jqueryui.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/dataTables.jqueryui.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/dataTables.jqueryui.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/jquery.dataTables.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/jquery.dataTables.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/29 20:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/metroui/js/tables/jquery.dataTables.min.js".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/metroui/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/themes/metroui/js/tables/jquery.dataTables.min.js
+HTTP_REFERER=http://localhost/testreko/repositorio/institucion/index
+---
+2015/10/30 12:53:30 [error] [php] Undefined variable: profs (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:6)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (6)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/30 12:54:59 [error] [php] Undefined variable: block (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:23)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (23)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/30 13:06:05 [error] [php] Undefined variable: usuarios (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:37)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index?r=profesor&start=0%20&block=5
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (37)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/30 13:09:29 [error] [php] Undefined variable: usuarios (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:37)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index?r=profesor&start=0%20&block=5
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (37)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/10/30 13:09:39 [error] [php] Undefined variable: pages (C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php:93)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): InstitucionController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): InstitucionController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php(9): InstitucionController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): InstitucionController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): InstitucionController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): InstitucionController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): InstitucionController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/institucion/index?r=profesor&start=0%20&block=5
+in C:\wamp\www\testreko\protected\modules\repositorio\views\institucion\index.php (93)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\InstitucionController.php (9)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 14:28:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testreko.actual_table_name' doesn't exist. The SQL statement executed was: DELETE FROM `actual_table_name` WHERE expire<:expire.
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 15:04:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1172 Result consisted of more than one row. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId,@vista).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (14)
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (21)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (97)
+2015/11/02 15:04:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1172 Result consisted of more than one row. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId,@vista)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(14): CDbCommand->execute()
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(21): InstitucionComponent->obtenerInstitucionUsuario('1')
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(97): InstitucionComponent->getInstitucionUsuario()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 15:08:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1172 Result consisted of more than one row. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId,@vista).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (14)
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (21)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (97)
+2015/11/02 15:08:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1172 Result consisted of more than one row. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId,@vista)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(14): CDbCommand->execute()
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(21): InstitucionComponent->obtenerInstitucionUsuario('6')
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(97): InstitucionComponent->getInstitucionUsuario()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 15:11:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1172 Result consisted of more than one row. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId,@vista).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (14)
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (21)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (98)
+2015/11/02 15:11:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1172 Result consisted of more than one row. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId,@vista)' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(14): CDbCommand->execute()
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(21): InstitucionComponent->obtenerInstitucionUsuario('6')
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(98): InstitucionComponent->getInstitucionUsuario()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 15:23:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (18)
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (28)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (98)
+2015/11/02 15:23:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId)' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(18): CDbCommand->queryAll()
+#2 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(28): InstitucionComponent->obtenerInstitucionUsuario('1')
+#3 C:\wamp\www\testreko\protected\controllers\SiteController.php(98): InstitucionComponent->getInstitucionUsuario()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 15:25:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (18)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (98)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 15:25:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId)' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(18): CDbCommand->queryAll()
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(98): InstitucionComponent->obtenerInstitucionUsuario('1')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 15:26:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (18)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (98)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 15:26:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId)' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(18): CDbCommand->queryAll()
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(98): InstitucionComponent->obtenerInstitucionUsuario('1')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 15:26:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (18)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (98)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 15:26:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE testreko.sp_components_obtener_institucion_usuario; expected 2, got 1. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId)' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(18): CDbCommand->queryAll()
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(98): InstitucionComponent->obtenerInstitucionUsuario('1')
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 15:55:14 [error] [php] Trying to get property of non-object (C:\wamp\www\testreko\protected\views\site\seleccioninstitucion.php:9)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(138): SiteController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSeleccionInstitucion()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion?listaInstituciones%5B0%5D%5Bid%5D=2&listaInstituciones%5B1%5D%5Bid%5D=1
+in C:\wamp\www\testreko\protected\views\site\seleccioninstitucion.php (9)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (138)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 16:04:24 [error] [php] Undefined index: nombre (C:\wamp\www\testreko\protected\views\site\seleccioninstitucion.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\testreko\protected\controllers\SiteController.php(138): SiteController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSeleccionInstitucion()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion?listaInstituciones%5B0%5D%5Bid%5D=1&listaInstituciones%5B1%5D%5Bid%5D=2
+in C:\wamp\www\testreko\protected\views\site\seleccioninstitucion.php (10)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (138)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 16:04:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Id.nombre' in 'field list'. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId).
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (18)
+in C:\wamp\www\testreko\protected\components\InstitucionComponent.php (28)
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (98)
+2015/11/02 16:04:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Id.nombre' in 'field list'. The SQL statement executed was: CALL sp_components_obtener_institucion_usuario(:nuevoUsuarioId)' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(18): CDbCommand->queryAll()
+#2 C:\wamp\www\testreko\protected\components\InstitucionComponent.php(28): InstitucionComponent->obtenerInstitucionUsuario('6')
+#3 C:\wamp\www\testreko\protected\controllers\SiteController.php(98): InstitucionComponent->getInstitucionUsuario()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/testreko/site/login
+HTTP_REFERER=http://localhost/testreko/site/login
+---
+2015/11/02 16:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_usuario".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin_usuario')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/admin_usuario
+HTTP_REFERER=http://localhost/testreko/site/seleccioninstitucion?listaInstituciones%5B0%5D%5Bid%5D=1&listaInstituciones%5B0%5D%5Bnombre%5D=utem&listaInstituciones%5B0%5D%5Bvision%5D=vision&listaInstituciones%5B0%5D%5Bmision%5D=mision&listaInstituciones%5B0%5D%5Bacreditada%5D=0&listaInstituciones%5B0%5D%5Bfecha_inicio_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bfecha_termino_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bdescripcion%5D=ajhsjah&listaInstituciones%5B0%5D%5Bfecha_creacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bfecha_modificacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bestado_institucion_id%5D=2&listaInstituciones%5B1%5D%5Bid%5D=2&listaInstituciones%5B1%5D%5Bnombre%5D=duoc&listaInstituciones%5B1%5D%5Bvision%5D=vision&listaInstituciones%5B1%5D%5Bmision%5D=mision&listaInstituciones%5B1%5D%5Bacreditada%5D=1&listaInstituciones%5B1%5D%5Bfecha_inicio_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bfecha_termino_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bdescripcion%5D=kjahsa&listaInstituciones%5B1%5D%5Bfecha_creacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bfecha_modificacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bestado_institucion_id%5D=1
+---
+2015/11/02 18:01:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_usuario".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin_usuario')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/admin_usuario
+HTTP_REFERER=http://localhost/testreko/site/seleccioninstitucion?listaInstituciones%5B0%5D%5Bid%5D=1&listaInstituciones%5B0%5D%5Bnombre%5D=utem&listaInstituciones%5B0%5D%5Bvision%5D=vision&listaInstituciones%5B0%5D%5Bmision%5D=mision&listaInstituciones%5B0%5D%5Bacreditada%5D=0&listaInstituciones%5B0%5D%5Bfecha_inicio_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bfecha_termino_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bdescripcion%5D=ajhsjah&listaInstituciones%5B0%5D%5Bfecha_creacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bfecha_modificacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B0%5D%5Bestado_institucion_id%5D=2&listaInstituciones%5B1%5D%5Bid%5D=2&listaInstituciones%5B1%5D%5Bnombre%5D=duoc&listaInstituciones%5B1%5D%5Bvision%5D=vision&listaInstituciones%5B1%5D%5Bmision%5D=mision&listaInstituciones%5B1%5D%5Bacreditada%5D=1&listaInstituciones%5B1%5D%5Bfecha_inicio_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bfecha_termino_acreditacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bdescripcion%5D=kjahsa&listaInstituciones%5B1%5D%5Bfecha_creacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bfecha_modificacion%5D=2015-08-06+15%3A40%3A32&listaInstituciones%5B1%5D%5Bestado_institucion_id%5D=1
+---
+2015/11/02 18:02:54 [error] [php] Undefined variable: listaInstituciones (C:\wamp\www\testreko\protected\controllers\SiteController.php:143)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (143)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 18:05:54 [error] [php] Undefined variable: listaInstituciones (C:\wamp\www\testreko\protected\controllers\SiteController.php:143)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (143)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 18:06:14 [error] [php] Undefined variable: listaInstituciones (C:\wamp\www\testreko\protected\controllers\SiteController.php:143)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (143)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 18:07:35 [error] [php] Undefined variable: listaInstituciones (C:\wamp\www\testreko\protected\controllers\SiteController.php:143)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (143)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 18:20:03 [error] [php] Undefined variable: listaInstituciones (C:\wamp\www\testreko\protected\controllers\SiteController.php:143)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (143)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 18:20:07 [error] [php] Undefined variable: listaInstituciones (C:\wamp\www\testreko\protected\controllers\SiteController.php:143)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (143)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 18:38:38 [error] [php] unserialize() expects parameter 1 to be string, array given (C:\wamp\www\testreko\protected\controllers\SiteController.php:143)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/site/seleccioninstitucion
+in C:\wamp\www\testreko\protected\controllers\SiteController.php (143)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 19:48:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testreko.repositorio_master' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `repositorio_master`.
+in C:\wamp\www\testreko\protected\modules\repositorio\views\repositoriomaster\index.php (20)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositoriomasterController.php (128)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/02 19:48:28 [error] [exception.CDbException] exception 'CDbException' with message 'The table "repositorio_master" for active record class "RepositorioMaster" cannot be found in the database.' in C:\wamp\www\yii\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(RepositorioMaster))
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#3 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\testreko\protected\modules\repositorio\views\repositoriomaster\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\tes...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\tes...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\tes...', Array, true)
+#15 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 C:\wamp\www\testreko\protected\modules\repositorio\controllers\RepositoriomasterController.php(128): CController->render('index', Array)
+#17 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): RepositoriomasterController->actionIndex()
+#18 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#28 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/testreko/repositorio/repositoriomaster/index
+HTTP_REFERER=http://localhost/testreko/repositorio/diseno/troncal
+---
+2015/11/02 19:48:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "repositorio/repositoriotroncalapp/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/rep...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/repositorio/repositoriotroncalapp/index
+HTTP_REFERER=http://localhost/testreko/repositorio/diseno/troncal
+---

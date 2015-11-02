@@ -79,21 +79,43 @@ class SiteController extends Controller
 	public function actionLogin()
 	{
 		$model=new LoginForm;
-
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+                    $model->attributes=$_POST['LoginForm'];
+                    // validate user input and redirect to the previous page if valid
+                    if($model->validate() && $model->login()){                           
+                            $listaInstituciones = Yii::app()->InstitucionComponent->getInstitucionUsuario();
+                            $contador = 0;
+                            foreach($listaInstituciones as $institucion){
+                                $contador = $contador + 1;
+                                $unicaInstitucion = $institucion;
+                            }
+                            if($contador == 1){
+                                Yii::app()->InstitucionComponent->setInstitucionSession(
+                                    $unicaInstitucion['id'],
+                                    $unicaInstitucion['nombre'],
+                                    $unicaInstitucion['vision'],
+                                    $unicaInstitucion['mision'],
+                                    $unicaInstitucion['acreditada'],
+                                    $unicaInstitucion['fecha_inicio_acreditacion'],
+                                    $unicaInstitucion['fecha_termino_acreditacion'],
+                                    $unicaInstitucion['descripcion']
+                                ); 
+                                $this->redirect(array("escritorio_usuario/escritoriousuario/index"));
+//				$this->redirect(Yii::app()->user->returnUrl);
+                            }
+                            else{
+//                              echo "Usted registra mas de una Institucion porfavor seleccione una";
+                                $this->redirect(array("seleccioninstitucion",'listaInstituciones'=>$listaInstituciones));
+                            }                            
+                    }
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -107,4 +129,32 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+        
+        public function actionSeleccionInstitucion()
+        {
+            if(isset($_GET['listaInstituciones']))
+            {
+                $listaInstituciones = $_GET['listaInstituciones'];
+                $this->render('seleccioninstitucion',array('listaInstituciones'=>$listaInstituciones));
+
+            }else{
+                if(isset($_POST['institucion']))
+                {
+                    $institucion = unserialize($_POST['institucion'][0]);
+                    
+                    Yii::app()->InstitucionComponent->setInstitucionSession(
+                        $institucion['id'],
+                        $institucion['nombre'],
+                        $institucion['vision'],
+                        $institucion['mision'],
+                        $institucion['acreditada'],
+                        $institucion['fecha_inicio_acreditacion'],
+                        $institucion['fecha_termino_acreditacion'],
+                        $institucion['descripcion']
+                    );                    
+                $this->redirect(array("escritorio_usuario/escritoriousuario/index"));
+                }            
+            }
+        }
+        
 }

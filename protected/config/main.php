@@ -38,9 +38,17 @@ return array(
 
 	// application components
 	'components'=>array(
+                'session' => array (
+                    'class' => 'system.web.CDbHttpSession',
+                    'connectionID' => 'db',
+                    'sessionTableName' => 'actual_table_name',
+                ),
                 'Validar' => array(
                     'class'=>'application.components.Validar',
-                ),            
+                ),
+                'InstitucionComponent'=>array(
+                    "class"=>'application.components.InstitucionComponent',
+                ),
                 'authManager'=>array(
                     "class"=>"CDbAuthManager",
                     "connectionID"=>"db",
@@ -84,17 +92,17 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+				
 			),
 		),
 		
-		'request' => array(
-            'baseUrl' => '/rekotest/testreko',
-		),
+//		'request' => array(
+//            'baseUrl' => '/rekotest/testreko',
+//		),
 
 	),
 

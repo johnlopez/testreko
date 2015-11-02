@@ -10,7 +10,21 @@ $this->breadcrumbs=array(
 <div class="main-content clear-float">
     <div class="tile-area no-padding">
         <div class="tile-group no-margin no-padding" style="width: 100%">
-            
+            <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/institucion/index";?>" >
+                <div class="tile-wide bg-darkBrown fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-library"></span>
+                    </div>
+                    <span class="tile-label">            
+                        <?php 
+                            $pizza  = CHtml::encode('Institucion');
+                            $porciones = explode("_", $pizza);
+                            foreach ($porciones as $p)
+                            echo $p." "; // porción
+                        ?>                
+                    </span>
+                </div>  
+            </a>
             <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/diseno/index";?>" >
                 <div class="tile-wide bg-darkBrown fg-white" data-role="tile">
                     <div class="tile-content iconic">
