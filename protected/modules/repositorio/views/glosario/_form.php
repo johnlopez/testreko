@@ -2,6 +2,7 @@
 /* @var $this GlosarioController */
 /* @var $model Glosario */
 /* @var $form CActiveForm */
+
 ?>
 
 <div class="form">
@@ -17,46 +18,46 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
-
+	<?php echo $form->errorSummary($glosario); ?>
+        
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'nombre'); ?>
+		<?php echo $form->labelEx($glosario,'nombre'); ?>
+		<?php echo $form->textField($glosario,'nombre',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($glosario,'nombre'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
+		<?php echo $form->labelEx($glosario,'descripcion'); ?>
+		<?php echo $form->textArea($glosario,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($glosario,'descripcion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_creacion'); ?>
-		<?php echo $form->textField($model,'fecha_creacion'); ?>
-		<?php echo $form->error($model,'fecha_creacion'); ?>
+		<?php echo $form->labelEx($glosario,'fecha_creacion'); ?>
+		<?php echo $form->textField($glosario,'fecha_creacion'); ?>
+		<?php echo $form->error($glosario,'fecha_creacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_modificacion'); ?>
-		<?php echo $form->textField($model,'fecha_modificacion'); ?>
-		<?php echo $form->error($model,'fecha_modificacion'); ?>
+		<?php echo $form->labelEx($glosario,'fecha_modificacion'); ?>
+		<?php echo $form->textField($glosario,'fecha_modificacion'); ?>
+		<?php echo $form->error($glosario,'fecha_modificacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_eliminacion'); ?>
-		<?php echo $form->textField($model,'fecha_eliminacion'); ?>
-		<?php echo $form->error($model,'fecha_eliminacion'); ?>
+		<?php echo $form->labelEx($glosario,'fecha_eliminacion'); ?>
+		<?php echo $form->textField($glosario,'fecha_eliminacion'); ?>
+		<?php echo $form->error($glosario,'fecha_eliminacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_acceso'); ?>
-		<?php echo $form->textField($model,'fecha_acceso'); ?>
-		<?php echo $form->error($model,'fecha_acceso'); ?>
-	</div>
+		<?php echo $form->labelEx($glosario,'fecha_acceso'); ?>
+		<?php echo $form->textField($glosario,'fecha_acceso'); ?>
+		<?php echo $form->error($glosario,'fecha_acceso'); ?>
+	</div>                
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($glosario->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

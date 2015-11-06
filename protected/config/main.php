@@ -41,7 +41,7 @@ return array(
                 'session' => array (
                     'class' => 'system.web.CDbHttpSession',
                     'connectionID' => 'db',
-                    'sessionTableName' => 'actual_table_name',
+                    'sessionTableName' => 'reko_session',
                 ),
                 'Validar' => array(
                     'class'=>'application.components.Validar',

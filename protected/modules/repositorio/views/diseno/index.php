@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 <div class="main-content clear-float">
     <div class="tile-area no-padding">
         <div class="tile-group no-margin no-padding" style="width: 100%">           
-            <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/diseno/troncal";?>" >
+            <a href="<?php echo Yii::app()->getBaseUrl()."/repositorio/repositorio/adminrepositorio";?>" >
                 <div class="tile-wide bg-darkBrown fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <span class="icon mif-stack3"></span>

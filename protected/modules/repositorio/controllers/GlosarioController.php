@@ -29,7 +29,7 @@ class GlosarioController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +37,7 @@ class GlosarioController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -50,10 +50,16 @@ class GlosarioController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{                
+                $repositorio = Yii::app()->session['repositorio'];
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'repositorio'=>$repositorio
+                        
 		));
+//		$this->render('view',array(
+//			'model'=>$this->loadModel($id),
+//		));
 	}
 
 	/**
@@ -62,21 +68,44 @@ class GlosarioController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Glosario;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Glosario']))
-		{
-			$model->attributes=$_POST['Glosario'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+                $modeloGlosario = new Glosario();
+                $glosario = $modeloGlosario;
+                $repositorio = Yii::app()->session['repositorio'];
+                
+                if(isset($_POST['Glosario']))
+                {                    
+                    $modeloGlosario->attributes = $_POST['Glosario'];
+                    $glosario = $modeloGlosario;
+                                   
+                    if($modeloGlosario->agregarGlosarioRepositorio(
+                            $repositorio->id,
+                            $glosario->nombre,
+                            $glosario->descripcion
+                    ))
+                    {
+                        $this->redirect(array('view','id'=>$modeloGlosario->lastInsertGlosarioId));
+                    }
+                }
+                
+                $this->render('create',array(
+                    'glosario'=>$glosario,
+                    'repositorio'=>$repositorio,
+                ));
+//		$model=new Glosario;
+//
+//		// Uncomment the following line if AJAX validation is needed
+//		// $this->performAjaxValidation($model);
+//
+//		if(isset($_POST['Glosario']))
+//		{
+//			$model->attributes=$_POST['Glosario'];
+//			if($model->save())
+//				$this->redirect(array('view','id'=>$model->id));
+//		}
+//
+//		$this->render('create',array(
+//			'model'=>$model,
+//		));
 	}
 
 	/**
@@ -86,21 +115,43 @@ class GlosarioController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Glosario']))
+            $glosario = $this->loadModel($id);
+            $repositorio = Yii::app()->session['repositorio'];
+            
+            if(isset($_POST['Glosario']))
 		{
-			$model->attributes=$_POST['Glosario'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                    echo "hola";
+			$glosario->attributes=$_POST['Glosario'];
+			if($glosario->modificarGlosarioRepositorio(
+                                $glosario->id,
+                                $repositorio->id,
+                                $glosario->nombre,
+                                $glosario->descripcion
+                        )){
+                            $this->redirect(array('view','id'=>$glosario->lastInsertGlosarioId));
+                        }
 		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+            
+            $this->render('update',array(
+                'glosario'=>$glosario,
+                'repositorio'=>$repositorio,
+            ));
+                
+//		$model=$this->loadModel($id);
+//
+//		// Uncomment the following line if AJAX validation is needed
+//		// $this->performAjaxValidation($model);
+//
+//		if(isset($_POST['Glosario']))
+//		{
+//			$model->attributes=$_POST['Glosario'];
+//			if($model->save())
+//				$this->redirect(array('view','id'=>$model->id));
+//		}
+//
+//		$this->render('update',array(
+//			'model'=>$model,
+//		));
 	}
 
 	/**
@@ -122,10 +173,18 @@ class GlosarioController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Glosario');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+                $glosario = new Glosario();
+                $repositorio = Yii::app()->session['repositorio'];
+                
+                $glosarios = $glosario->listaGlosarioRepositorio($repositorio->id);
+                $this->render('index',array(
+			'glosarios'=>$glosarios,
+                        'repositorio'=>$repositorio,
 		));
+//		$dataProvider=new CActiveDataProvider('Glosario');
+//		$this->render('index',array(
+//			'dataProvider'=>$dataProvider,
+//		));
 	}
 
 	/**
@@ -133,14 +192,21 @@ class GlosarioController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Glosario('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Glosario']))
-			$model->attributes=$_GET['Glosario'];
-
-		$this->render('admin',array(
-			'model'=>$model,
+                $modeloGlosario = new Glosario();                
+                $glosarios = $modeloGlosario->listaGlosarioRepositorio(Yii::app()->session['repositorio']->id);
+                $repositorio = Yii::app()->session['repositorio'];
+                $this->render('admin',array(
+                        'glosarios'=>$glosarios,
+                        'repositorio'=>$repositorio,
 		));
+//		$model=new Glosario('search');
+//		$model->unsetAttributes();  // clear any default values
+//		if(isset($_GET['Glosario']))
+//			$model->attributes=$_GET['Glosario'];
+//
+//		$this->render('admin',array(
+//			'model'=>$model,
+//		));
 	}
 
 	/**

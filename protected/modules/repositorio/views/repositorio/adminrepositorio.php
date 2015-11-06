@@ -1,84 +1,8 @@
 
-
-<?php 
-foreach ($institucion as $institucio)
-{
-    echo $institucio->id."<br>";
-}
-?>
-
-<?php
-/* @var $this UsuarioController */
-/* @var $model Usuario */
-
-$this->breadcrumbs=array(
-	'Usuarios'=>array('index'),
-	'Manage',
-);
-
-//$this->menu=array(
-//	array('label'=>'List Usuario', 'url'=>array('index')),
-//	array('label'=>'Create Usuario', 'url'=>array('create')),
-//);
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#usuario-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
-?>
-<div class="place-right padding20 no-padding-top no-padding-right">
-        <form class="place-left padding20 no-padding-left no-padding-bottom no-padding-top" action="<?php echo Yii::app()->getBaseUrl(); ?>/css/usuario/index" >
-            <button class="button primary" type="submit">
-                    Listar Usuario
-            </button>
-        </form>    
-        <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/css/usuario/create" >
-            <button class="button primary" type="submit">
-                    Crear Usuario
-            </button>
-        </form>          
-</div>
-
-<h1>Usuarios</h1>
+<h1>Repositorios</h1>
 <div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
+<div class="search-form" style="display:none"></div><!-- search-form -->
 
-<?php 
-//echo CHtml::link('Advanced Search','#',array('class'=>'search-button'));
-?>
-<div class="search-form" style="display:none">
-<?php 
-//$this->renderPartial('_search',array(
-//	'model'=>$model,
-//)); 
-?>
-</div><!-- search-form -->
-
-<?php 
-//$this->widget('zii.widgets.grid.CGridView', array(
-//	'id'=>'usuario-grid',
-//	'dataProvider'=>$model->search(),
-//	'filter'=>$model,
-//	'columns'=>array(
-//		'id',
-//		'usuario',
-//		'clave',
-//		'fecha_acceso',
-//		'fecha_modificacion',
-//		'fecha_creacion',
-//		array(
-//			'class'=>'CButtonColumn',
-//		),
-//	),
-//)); 
-?>
 <script type="text/javascript" language="javascript" class="init">
 $(document).ready(function() {
 	$('#main_table_demo').DataTable();
@@ -120,38 +44,38 @@ $(document).ready(function() {
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
                     <th>Opciones</th>
                 </tr>
             </thead>
             <tfoot>
                 <tr>
                     <th>Id</th>
-                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>                    
                     <th>Opciones</th>
                 </tr>
             </tfoot>
             <tbody>
-                <?php foreach ($institucion as $m):?>                                                     
+                <?php foreach ($repositorios as $repositorio):?>                                                     
                     <tr>
-                        <td><?php echo $m->id; ?></td>
-                        <td><?php echo $m->nombre; ?></td>
-                        
+                        <td><?php echo $repositorio['id']; ?></td>
+                        <td><?php echo $repositorio['nombre']; ?></td>
+                        <td><?php echo $repositorio['descripcion']; ?></td>
                         <td>                                        
                             <?php 
                             // http://www.v09studio.com/websystems/materials/forms.html
                             // pagina html post url form button
                             ?>                                        
-                            <div id="button-group-1">
-                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/institucion/index" method="get">
-                                    <input type="hidden" name="id" value="<?php echo $m->id?>" />
+                            <div id="button-group-1">                                
+                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/repositorio/seleccionherramienta" method="post">
+                                    <input type="hidden" name="repositorioId" value='<?php echo $repositorio['id'];?>' />
+                                    <!-- <input type="hidden" name="repositorio[]" value='<?php //echo serialize($repositorio)?>' />-->
                                     <button class="toolbar-button bg-white bg-active-grayLighter fg-black" type="submit">
-                                        <span class="icon mif-search">
-
-                                        </span>
+                                        Gestionar Herramientas
                                     </button>
-                                </form>
-                                
+                                </form>                                
                             </div>                                        
                         </td>
                     </tr>

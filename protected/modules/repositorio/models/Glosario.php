@@ -14,6 +14,7 @@
  */
 class Glosario extends CActiveRecord
 {
+        public $lastInsertGlosarioId;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -106,4 +107,60 @@ class Glosario extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function listaGlosarioRepositorio($nuevoRepositorioId) {        
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_lista_glosario_repositorio(:nuevoRepositorioId)");
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+        }
+        
+        public function agregarGlosarioRepositorio(
+                $nuevoRepositorioId,
+                $nuevoGlosarioNombre,
+                $nuevoGlosarioDescripcion                
+        )
+        {
+             $command = Yii::app()->db->createCommand("CALL sp_repositorio_agregar_glosario_repositorio_troncal(
+                :nuevoRepositorioId,
+                :nuevoGlosarioNombre,
+                :nuevoGlosarioDescripcion,                
+                @last_insert_glosario_id)"
+            );     
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);
+            $command->bindParam(':nuevoGlosarioNombre',$nuevoGlosarioNombre);
+            $command->bindParam(':nuevoGlosarioDescripcion',$nuevoGlosarioDescripcion);
+            
+            $command->execute();
+            $this->lastInsertGlosarioId = Yii::app()->db->createCommand("select @last_insert_glosario_id as result;")->queryScalar();
+            
+            return $command;
+        }
+        
+        public function modificarGlosarioRepositorio(
+                    $nuevoGlosarioId,
+                    $nuevoRepositorioId,
+                    $nuevoGlosarioNombre,
+                    $nuevoGlosarioDescripcion
+        )
+        {
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_modificar_glosario_repositorio_troncal(
+                :nuevoGlosarioId,
+                :nuevoRepositorioId,
+                :nuevoGlosarioNombre,
+                :nuevoGlosarioDescripcion,                
+                @last_insert_glosario_id
+            )");              
+            $command->bindParam(':nuevoGlosarioId',$nuevoGlosarioId);
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);
+            $command->bindParam(':nuevoGlosarioNombre',$nuevoGlosarioNombre);
+            $command->bindParam(':nuevoGlosarioDescripcion',$nuevoGlosarioDescripcion);
+            $command->execute();
+            $this->lastInsertGlosarioId = Yii::app()->db->createCommand("select @last_insert_glosario_id as result;")->queryScalar();
+
+            return $command;
+        }
+        
+        
+        
 }

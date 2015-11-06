@@ -1,29 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "institucion".
+ * This is the model class for table "repositorio".
  *
- * The followings are the available columns in table 'institucion':
+ * The followings are the available columns in table 'repositorio':
  * @property integer $id
  * @property string $nombre
- * @property string $vision
- * @property string $mision
- * @property integer $acreditada
- * @property string $fecha_inicio_acreditacion
- * @property string $fecha_termino_acreditacion
  * @property string $descripcion
- * @property string $fecha_creacion
+ * @property string $fecha_acceso
  * @property string $fecha_modificacion
- * @property integer $estado_institucion_id
+ * @property string $fecha_creacion
+ * @property string $fecha_eliminacion
+ * @property integer $tipo_repositorio_id
+ * @property integer $modelo_aprendizaje_id
  */
-class Institucion extends CActiveRecord
+class Repositorio extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'institucion';
+		return 'repositorio';
 	}
 
 	/**
@@ -34,12 +32,12 @@ class Institucion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('acreditada, estado_institucion_id', 'numerical', 'integerOnly'=>true),
-			array('nombre, vision, mision, descripcion', 'length', 'max'=>45),
-			array('fecha_inicio_acreditacion, fecha_termino_acreditacion, fecha_creacion, fecha_modificacion', 'safe'),
+			array('tipo_repositorio_id, modelo_aprendizaje_id', 'numerical', 'integerOnly'=>true),
+			array('nombre, descripcion', 'length', 'max'=>45),
+			array('fecha_acceso, fecha_modificacion, fecha_creacion, fecha_eliminacion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, vision, mision, acreditada, fecha_inicio_acreditacion, fecha_termino_acreditacion, descripcion, fecha_creacion, fecha_modificacion, estado_institucion_id', 'safe', 'on'=>'search'),
+			array('id, nombre, descripcion, fecha_acceso, fecha_modificacion, fecha_creacion, fecha_eliminacion, tipo_repositorio_id, modelo_aprendizaje_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,15 +60,13 @@ class Institucion extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
-			'vision' => 'Vision',
-			'mision' => 'Mision',
-			'acreditada' => 'Acreditada',
-			'fecha_inicio_acreditacion' => 'Fecha Inicio Acreditacion',
-			'fecha_termino_acreditacion' => 'Fecha Termino Acreditacion',
 			'descripcion' => 'Descripcion',
-			'fecha_creacion' => 'Fecha Creacion',
+			'fecha_acceso' => 'Fecha Acceso',
 			'fecha_modificacion' => 'Fecha Modificacion',
-			'estado_institucion_id' => 'Estado Institucion',
+			'fecha_creacion' => 'Fecha Creacion',
+			'fecha_eliminacion' => 'Fecha Eliminacion',
+			'tipo_repositorio_id' => 'Tipo Repositorio',
+			'modelo_aprendizaje_id' => 'Modelo Aprendizaje',
 		);
 	}
 
@@ -94,15 +90,13 @@ class Institucion extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('vision',$this->vision,true);
-		$criteria->compare('mision',$this->mision,true);
-		$criteria->compare('acreditada',$this->acreditada);
-		$criteria->compare('fecha_inicio_acreditacion',$this->fecha_inicio_acreditacion,true);
-		$criteria->compare('fecha_termino_acreditacion',$this->fecha_termino_acreditacion,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
-		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
+		$criteria->compare('fecha_acceso',$this->fecha_acceso,true);
 		$criteria->compare('fecha_modificacion',$this->fecha_modificacion,true);
-		$criteria->compare('estado_institucion_id',$this->estado_institucion_id);
+		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
+		$criteria->compare('fecha_eliminacion',$this->fecha_eliminacion,true);
+		$criteria->compare('tipo_repositorio_id',$this->tipo_repositorio_id);
+		$criteria->compare('modelo_aprendizaje_id',$this->modelo_aprendizaje_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -113,10 +107,25 @@ class Institucion extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Institucion the static model class
+	 * @return Repositorio the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
+        
+        public function listaRepositorioInstitucion($idInstitucion) {        
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_lista_repositorio_institucion(:nuevoInstitucionId)");
+            $command->bindParam(':nuevoInstitucionId',$idInstitucion);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+        }
+        
+        public function obtenerHerramientasDisponiblesRepositorio($nuevoRepositorioId){
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_obtener_herramientas_disponibles_repositorio(:nuevoRepositorioId)");
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+        }
+        
 }
