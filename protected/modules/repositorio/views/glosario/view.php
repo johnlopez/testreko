@@ -56,3 +56,25 @@ $this->breadcrumbs=array(
 		'fecha_acceso',
 	),
 )); ?>
+
+
+<table class="table striped" id="main_table_demo">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Termino</th>
+        <th>Definicion</th>            
+    </tr>
+    </thead>
+    <tbody>
+        <?php foreach($glosarioTerminoDefinicion as $gtd):?>
+
+        <tr>
+            <td><?php echo $gtd->id;?></td>
+            <td><?php echo $gtd->termino;?></td>
+            <td><?php echo $gtd->definicion;?></td>      
+        </tr>  
+        <?php endforeach;?>
+
+    </tbody>
+</table>

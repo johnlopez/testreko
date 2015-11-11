@@ -108,8 +108,8 @@ class SiteController extends Controller
                                     $unicaInstitucion['fecha_termino_acreditacion'],
                                     $unicaInstitucion['descripcion']
                                 ); 
-                                $this->redirect(array("escritorio_usuario/escritoriousuario/index"));
-//				$this->redirect(Yii::app()->user->returnUrl);
+//                                $this->redirect(array("escritorio_usuario/escritoriousuario/index"));
+				$this->redirect(Yii::app()->user->returnUrl);
                             }
                             else{
 //                              echo "Usted registra mas de una Institucion porfavor seleccione una";

@@ -84,7 +84,7 @@ $(document).ready(function() {
                             // pagina html post url form button
                             ?>                                        
                             <div id="button-group-1">
-                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/css/usuario/view" method="get">
+                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/glosario/view" method="get">
                                     <input type="hidden" name="id" value="<?php echo $glosario['id']?>" />
                                     <button class="toolbar-button bg-white bg-active-grayLighter fg-black" type="submit">
                                         <span class="icon mif-search">
@@ -100,7 +100,7 @@ $(document).ready(function() {
                                         </span>
                                     </button>
                                 </form>
-                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/css/usuario/delete" method="post">
+                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/glosario/delete" method="post">
                                     <input type="hidden" name="id" value="<?php echo $glosario['id']?>" />
                                     <button class="toolbar-button bg-white bg-active-grayLighter fg-black" type="submit">
                                         <span class="icon mif-cancel">
