@@ -52,11 +52,36 @@ class GlosarioController extends Controller
 	public function actionView($id)
 	{                
                 $repositorio = Yii::app()->session['repositorio'];
+                
+                $glosario = new Glosario();
+                $glosarioTerminoDefinicion = new GlosarioTerminoDefinicion('myscenario');
+                $glosarioTerminoDefinicionArray = Array();
+                
+                $listaGlosarioTerminoDefinicion = $glosarioTerminoDefinicion->listaGlosarioTerminoDefinicion($id);
+                
+                foreach ($listaGlosarioTerminoDefinicion as $lista)
+                {
+                    $tmp = new GlosarioTerminoDefinicion('myscenario');
+                    $tmp->id = $lista['id'];
+                    $tmp->termino = $lista['termino'];
+                    $tmp->definicion = $lista['definicion'];
+                    $glosarioTerminoDefinicionArray[] = $tmp;
+                }
+                                
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
-                        'repositorio'=>$repositorio
+                        'repositorio'=>$repositorio,
+                        'glosarioTerminoDefinicion'=>$glosarioTerminoDefinicionArray,
                         
 		));
+//		//////////SOLO GlOSARIO///////////////////////////////////////////////////
+//                $repositorio = Yii::app()->session['repositorio'];
+//		$this->render('view',array(
+//			'model'=>$this->loadModel($id),
+//                        'repositorio'=>$repositorio
+//                        
+//		));
+//		//////////ORIGINAL///////////////////////////////////////////////////
 //		$this->render('view',array(
 //			'model'=>$this->loadModel($id),
 //		));
@@ -71,6 +96,7 @@ class GlosarioController extends Controller
                 $modeloGlosario = new Glosario();
                 $glosario = $modeloGlosario;
                 $repositorio = Yii::app()->session['repositorio'];
+                $glosarioTerminoDefinicion = new GlosarioTerminoDefinicion();
                 
                 if(isset($_POST['Glosario']))
                 {                    
@@ -90,6 +116,7 @@ class GlosarioController extends Controller
                 $this->render('create',array(
                     'glosario'=>$glosario,
                     'repositorio'=>$repositorio,
+                    'glosarioTerminoDefinicion' => $glosarioTerminoDefinicion,
                 ));
 //		$model=new Glosario;
 //
@@ -117,6 +144,19 @@ class GlosarioController extends Controller
 	{
             $glosario = $this->loadModel($id);
             $repositorio = Yii::app()->session['repositorio'];
+            $glosarioTerminoDefinicion = new GlosarioTerminoDefinicion();
+            $glosarioTerminoDefinicionArray = Array();
+            
+            $listaGlosarioTerminoDefinicion = $glosarioTerminoDefinicion->listaGlosarioTerminoDefinicion($id);
+            
+            foreach ($listaGlosarioTerminoDefinicion as $lista)
+            {
+                $tmp = new GlosarioTerminoDefinicion();
+                $tmp->id = $lista['id'];
+                $tmp->termino = $lista['termino'];
+                $tmp->definicion = $lista['definicion'];
+                $glosarioTerminoDefinicionArray[] = $tmp;
+            }
             
             if(isset($_POST['Glosario']))
 		{
@@ -135,7 +175,9 @@ class GlosarioController extends Controller
             $this->render('update',array(
                 'glosario'=>$glosario,
                 'repositorio'=>$repositorio,
+                'glosarioTerminoDefinicion'=>$glosarioTerminoDefinicionArray,
             ));
+            
                 
 //		$model=$this->loadModel($id);
 //
