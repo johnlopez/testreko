@@ -26,8 +26,8 @@ foreach($herramientasDisponibles as $herramienta):?>
     <?php endif;?>
 
     <?php if(1 == $herramienta['archivo_recurso']):;?>
-    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/site/seleccioninstitucion";?>" method="post">
-        <input type="hidden" name="institucion[]" value='<?php echo serialize($herramienta);?>' />
+    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/repositorio/archivorecurso/admin";?>" method="post">
+        <input type="hidden" name="herramientaBool" value='<?php echo $herramienta['archivo_recurso'];?>' />
             <button class="tile-wide bg-darkGreen fg-white" data-role="tile" type="submit">
             <div class="tile-content iconic">
                 <span class="icon mif-file-text"></span>

@@ -28,8 +28,8 @@ class ArchivorecursoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('index','view','upload','viewupload'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +37,7 @@ class ArchivorecursoController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -170,4 +170,86 @@ class ArchivorecursoController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionUpload()
+        {
+            $model = new FormUpload();
+            $msg = '';
+            if(isset($_POST['FormUpload']))
+            {
+                $model->attributes=$_POST['FormUpload'];
+                $images = CUploadedFile::getInstancesByName('images');
+                if(count($images)===0)
+                {
+                    $msg = " No has seleccionado imagenes ";
+                }
+                elseif (!$model->validate()) 
+                {
+                    $msg = " Error al enviar el formulario";
+                }
+                else
+                {
+                    $institucinoNombre = Yii::app()->session['institucionNombre'];
+                    $repositorio = Yii::app()->session['repositorio'];
+                    var_dump($repositorio);
+                    
+                    $conexion = Yii::app()->db;
+                    $username = Yii::app()->user->name;
+                    $consulta = "SELECT id FROM ";
+                    $consulta.= "usuario WHERE usuario = '$username'";
+                    $resultado = $conexion->createCommand($consulta);
+                    $query = $resultado->query();                    
+
+                    foreach ($query as $fila)
+                    {
+                        $id_user = $fila['id'];
+                    }
+                    $folder = strtolower($model->title);
+                    $buscar = array(    ' ','ñ','á','é','í','ó','ú','à','è','ì','ò','ù','ä','ë','ï','ö','ü');
+                    $reemplazar = array('-','n','a','e','i','o','u','a','e','i','o','u','a','e','i','o','u');
+                    $folder = str_replace($buscar, $reemplazar, $folder);
+                    $path = Yii::getPathOfAlias('webroot').'/reko-archivos/'.$institucinoNombre.'/'.'repositorio-id-'.$repositorio->id.'/';
+                    // Si no existe la carpeta se crea
+                    if(!is_dir($path))
+                    {
+                        mkdir($path,0,true);
+                        chmod($path,0755);
+                    }
+                    // Guardar Imagenes
+                    foreach($images as $image=>$i)
+                    {
+                        $aleatorio = rand(100000,999999);
+                        //nombre de la imagen
+                        $img = $aleatorio."-".$i->name;
+                        $consulta = "INSERT INTO tbl_image ";
+                        $consulta.= "(id_user,title,folder,image) ";
+                        $consulta.= "VALUES ";
+                        $consulta.= "('".$id_user."','".
+                                $model->title."','".
+                                $folder."','".
+                                $img."')";
+                        $resultado = $conexion->createCommand($consulta)->execute();
+                        $i->saveAs($path.$img);                                
+                    }
+                }
+            }
+            
+            $this->render('upload',array(
+			'model'=>$model,
+                        'msg'=>$msg,
+                    )
+            );
+        }
+        
+        public function actionViewUpload()
+        {
+            $tblImage = new TblImage();
+            $tblImage = $tblImage->findByPk(14);
+            var_dump($tblImage);
+            $this->render('viewupload',array(
+                        'tblImage'=>$tblImage,
+                    )
+            );
+        }
+        
 }

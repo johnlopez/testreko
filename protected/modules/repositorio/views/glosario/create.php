@@ -28,7 +28,6 @@ $this->breadcrumbs=array(
 <h1>Crear Glosario</h1>
 <div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
 
-
 <?php $this->renderPartial('_form', array(
     'glosario'=>$glosario,
     'repositorio'=>$repositorio,
