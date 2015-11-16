@@ -6598,3 +6598,284 @@ Stack trace:
 REQUEST_URI=/testreko/repositorio/archivorecurso/upload
 in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (211)
 in C:\wamp\www\testreko\index.php (13)
+2015/11/16 14:11:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/846356-maxresdefault.jpg".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/upload/8...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/images/upload/846356-maxresdefault.jpg
+HTTP_REFERER=http://localhost/testreko/repositorio/archivorecurso/viewupload
+---
+2015/11/16 14:13:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/846356-maxresdefault.jpg".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/upload/8...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/images/upload/846356-maxresdefault.jpg
+HTTP_REFERER=http://localhost/testreko/repositorio/archivorecurso/viewupload
+---
+2015/11/16 15:03:40 [error] [php] Undefined variable: model (C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php:43)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ArchivorecursoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ArchivorecursoController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php(252): ArchivorecursoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ArchivorecursoController->actionViewUpload()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/viewupload
+in C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php (43)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (252)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 15:09:19 [error] [php] Undefined variable: model (C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php:28)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ArchivorecursoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ArchivorecursoController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php(252): ArchivorecursoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ArchivorecursoController->actionViewUpload()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/viewupload
+in C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php (28)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (252)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 15:11:10 [error] [php] Undefined variable: herramienta (C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php:26)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ArchivorecursoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ArchivorecursoController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php(252): ArchivorecursoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ArchivorecursoController->actionViewUpload()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/viewupload
+in C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php (26)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (252)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 15:12:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('download')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/arc...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testreko/repositorio/archivorecurso/download
+HTTP_REFERER=http://localhost/testreko/repositorio/archivorecurso/viewupload
+---
+2015/11/16 15:18:17 [error] [php] file_get_contents(/testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory (C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php:260)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/download
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (260)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 15:20:23 [error] [php] file_get_contents(/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory (C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php:261)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/download
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (261)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 15:21:00 [error] [php] file_get_contents(/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory (C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php:261)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/download
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (261)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 15:21:56 [error] [php] file_get_contents(/testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory (C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php:261)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/download
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (261)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 16:04:51 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(457): tag()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php(13): image()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): ArchivorecursoController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): ArchivorecursoController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): ArchivorecursoController->renderPartial()
+#7 C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php(252): ArchivorecursoController->render()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ArchivorecursoController->actionViewUpload()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/viewupload
+in C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php (13)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (252)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 16:06:56 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(457): tag()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php(13): image()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): ArchivorecursoController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): ArchivorecursoController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): ArchivorecursoController->renderPartial()
+#7 C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php(252): ArchivorecursoController->render()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ArchivorecursoController->actionViewUpload()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/viewupload
+in C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php (13)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (252)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 16:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/height/100/width/100".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('testreko/reko-a...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/height/100/width/100
+HTTP_REFERER=http://localhost/testreko/repositorio/archivorecurso/viewupload
+---
+2015/11/16 16:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "repositorio/C:/wamp/www/testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/height/100/width/100".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('repositorio/C:/...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/repositorio/C:/wamp/www/testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/height/100/width/100
+HTTP_REFERER=http://localhost/testreko/repositorio/archivorecurso/viewupload
+---
+2015/11/16 16:10:24 [error] [php] Undefined variable: row (C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php:13)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ArchivorecursoController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ArchivorecursoController->renderPartial()
+#2 C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php(252): ArchivorecursoController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ArchivorecursoController->actionViewUpload()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ArchivorecursoController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ArchivorecursoController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ArchivorecursoController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArchivorecursoController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\testreko\index.php(13): CWebApplication->run()
+REQUEST_URI=/testreko/repositorio/archivorecurso/viewupload
+in C:\wamp\www\testreko\protected\modules\repositorio\views\archivorecurso\viewupload.php (13)
+in C:\wamp\www\testreko\protected\modules\repositorio\controllers\ArchivorecursoController.php (252)
+in C:\wamp\www\testreko\index.php (13)
+2015/11/16 16:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/id/14/height/100/width/100".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('testreko/reko-a...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/id/14/height/100/width/100
+HTTP_REFERER=http://localhost/testreko/repositorio/archivorecurso/viewupload
+---
+2015/11/16 16:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/id/14/height/100/width/100".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('testreko/reko-a...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\testreko\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testreko/testreko/reko-archivos/utem/repositorio-id-1/846356-maxresdefault.jpg/id/14/height/100/width/100
+HTTP_REFERER=http://localhost/testreko/repositorio/archivorecurso/viewupload
+---

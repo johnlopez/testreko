@@ -28,7 +28,7 @@ class ArchivorecursoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','upload','viewupload'),
+				'actions'=>array('index','view','upload','viewupload','download'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -245,11 +245,23 @@ class ArchivorecursoController extends Controller
         {
             $tblImage = new TblImage();
             $tblImage = $tblImage->findByPk(14);
-            var_dump($tblImage);
             $this->render('viewupload',array(
                         'tblImage'=>$tblImage,
                     )
             );
+        }
+        
+        public function actionDownload()
+        {   
+            if(isset($_POST['image']))
+            {
+                $image = $_POST['image'];
+                if( file_exists( YiiBase::getPathOfAlias('webroot').'/reko-archivos/utem/repositorio-id-1/'.$image ) ){
+                    Yii::app()->getRequest()->sendFile( $image, file_get_contents(YiiBase::getPathOfAlias('webroot').'/reko-archivos/utem/repositorio-id-1/'.$image ) );
+                }
+//                echo $_POST['image'];
+
+            }
         }
         
 }
