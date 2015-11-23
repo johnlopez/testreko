@@ -57,6 +57,8 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 
+<h1>Terminos </h1>
+<div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
 
 <table class="table striped" id="main_table_demo">
     <thead>
@@ -78,3 +80,35 @@ $this->breadcrumbs=array(
 
     </tbody>
 </table>
+
+<h1>Archivos </h1>
+<div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
+<?php // echo CHtml::image(Yii::app()->baseUrl.$archivo['ruta'].$archivo['nombre'], '', array('style' => 'width:300px; height: 200px'));?>
+<table class="table striped" id="main_table_demo">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Archivo</th>
+        <th>Tanaño</th>
+        <th>Tipo</th>            
+        <th>Opciones</th>
+    </tr>
+    </thead>
+    <tbody>
+        <?php foreach($archivos as $archivo):?>
+            <tr>
+                <td><?php echo $archivo['id'] ;?></td>
+                <td><?php echo $archivo['nombre'] ;?></td>
+                <td><?php echo $archivo['tamano']." Bytes" ;?></td>
+                <td><?php echo $archivo['mime_type'] ;?></td>
+                <td>
+                    <form class="" action="<?php echo Yii::app()->getBaseUrl()."/repositorio/glosario/descargararchivoglosario";?>" method="post">
+                        <input type="hidden" name="archivoId" value='<?php echo $archivo['id'];?>' />
+                        <button class="button" type="submit">Descargar</button>
+                    </form> 
+                </td>   
+            </tr>  
+        <?php endforeach; ?>
+    </tbody>
+</table>
+

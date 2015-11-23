@@ -47,9 +47,13 @@ $this->breadcrumbs=array(
             <button class="button primary" type="submit">
                     Agregar Termino
             </button>
-        </form> 
-        
-        
+        </form>
+        <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/glosario/agregararchivoglosario" method="post">
+            <input type="hidden" name="glosarioId" value="<?php echo $glosario->id?>" />
+            <button class="button primary" type="submit">
+                    Agregar Archivo
+            </button>
+        </form>        
 </div>
 <h1>Editar Glosario <?php echo $glosario->nombre; ?></h1>
 <div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>

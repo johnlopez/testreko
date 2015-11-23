@@ -244,7 +244,7 @@ class ArchivorecursoController extends Controller
         public function actionViewUpload()
         {
             $tblImage = new TblImage();
-            $tblImage = $tblImage->findByPk(14);
+            $tblImage = $tblImage->findByPk(15);
             $this->render('viewupload',array(
                         'tblImage'=>$tblImage,
                     )
@@ -253,6 +253,7 @@ class ArchivorecursoController extends Controller
         
         public function actionDownload()
         {   
+            // http://www.yiiframework.com/forum/index.php/topic/32932-download-file-using-yiiapp-getrequest-sendfile/
             if(isset($_POST['image']))
             {
                 $image = $_POST['image'];
