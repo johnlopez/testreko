@@ -1,3 +1,6 @@
+<h1>Repositorio : <?php echo $repositorio->nombre; ?></h1>
+<div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
+
 <h1>Glosario: <?php echo $glosario->nombre;?></h1>
 <div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
 
@@ -15,15 +18,8 @@
                     'validateOnSubmit'=>true,
                 ),
             ));
-    ?>
+    ?>    
     
-    <div class='row'>
-        <?php
-            echo $form->labelEx($model,'title');
-            echo $form->textField($model,'title');
-            echo $form->error($model,'title',array('class'=>'text-error'));
-        ?>
-    </div>
     <div class='row'>
         <?php
             $this->widget('CMultiFileUpload',
