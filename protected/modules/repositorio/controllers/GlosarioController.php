@@ -109,8 +109,7 @@ class GlosarioController extends Controller
                                    
                     if($modeloGlosario->agregarGlosarioRepositorio(
                             $repositorio->id,
-                            $glosario->nombre,
-                            $glosario->descripcion
+                            $glosario
                     ))
                     {
                         $this->redirect(array('view','id'=>$modeloGlosario->lastInsertGlosarioId));

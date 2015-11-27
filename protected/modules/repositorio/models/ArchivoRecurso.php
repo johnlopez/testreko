@@ -14,6 +14,7 @@
  */
 class ArchivoRecurso extends CActiveRecord
 {
+        public $lastInsertArchivoRecursoId; 
 	/**
 	 * @return string the associated database table name
 	 */
@@ -106,4 +107,65 @@ class ArchivoRecurso extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function agregarArchivoRecursoRepositorioTroncal(
+                $nuevoRepositorioId,
+                $nuevoArchivoRecurso              
+        )
+        {
+            $nuevoArchivoRecursoId = $nuevoArchivoRecurso->id;
+            $nuevoArchivoRecursoNombre = $nuevoArchivoRecurso->nombre; 
+            $nuevoArchivoRecursoDescripcion = $nuevoArchivoRecurso->descripcion;
+            $nuevoRecursoTabla = $nuevoArchivoRecurso->tableSchema->name;
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_agregar_archivo_recurso_repositorio_troncal(
+                :nuevoRepositorioId,
+                :nuevoArchivoRecursoNombre,
+                :nuevoArchivoRecursoDescripcion,   
+                :nuevoRecursoTabla,
+                @last_insert_archivo_recurso_id
+                )"
+            );     
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);
+            $command->bindParam(':nuevoArchivoRecursoNombre',$nuevoArchivoRecursoNombre);
+            $command->bindParam(':nuevoArchivoRecursoDescripcion',$nuevoArchivoRecursoDescripcion);
+            $command->bindParam(':nuevoArchivoRecursoDescripcion',$nuevoArchivoRecursoDescripcion);
+            $command->bindParam(':nuevoRecursoTabla',$nuevoRecursoTabla);
+            
+            $command->execute();
+            $this->lastInsertArchivoRecursoId = Yii::app()->db->createCommand("select @last_insert_archivo_recurso_id as result;")->queryScalar();
+            
+            return $command;
+        }
+        
+        public function listaArchivoRecursoRepositorioTroncal($nuevoRepositorioId) {        
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_lista_archivo_recurso_repositorio_troncal(:nuevoRepositorioId)");
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+        }
+        
+         public function modificarArchivoRecursoRepositorioTroncal(
+                    $nuevoArchivoRecursoId,
+                    $nuevoRepositorioId,
+                    $nuevoArchivoRecursoNombre,
+                    $nuevoArchivoRecursoDescripcion
+        )
+        {
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_modificar_archivo_recurso_repositorio_troncal(
+                :nuevoArchivoRecursoId,
+                :nuevoRepositorioId,
+                :nuevoArchivoRecursoNombre,
+                :nuevoArchivoRecursoDescripcion,                
+                @last_insert_archivo_recurso_id
+            )");              
+            $command->bindParam(':nuevoArchivoRecursoId',$nuevoArchivoRecursoId);
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);
+            $command->bindParam(':nuevoArchivoRecursoNombre',$nuevoArchivoRecursoNombre);
+            $command->bindParam(':nuevoArchivoRecursoDescripcion',$nuevoArchivoRecursoDescripcion);
+            $command->execute();
+            $this->lastInsertArchivoRecursoId = Yii::app()->db->createCommand("select @last_insert_archivo_recurso_id as result;")->queryScalar();
+
+            return $command;
+        }
+        
 }

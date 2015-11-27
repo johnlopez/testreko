@@ -17,46 +17,46 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($archivoRecurso); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'nombre'); ?>
+		<?php echo $form->labelEx($archivoRecurso,'nombre'); ?>
+		<?php echo $form->textField($archivoRecurso,'nombre',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($archivoRecurso,'nombre'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
+		<?php echo $form->labelEx($archivoRecurso,'descripcion'); ?>
+		<?php echo $form->textArea($archivoRecurso,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($archivoRecurso,'descripcion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_creacion'); ?>
-		<?php echo $form->textField($model,'fecha_creacion'); ?>
-		<?php echo $form->error($model,'fecha_creacion'); ?>
+		<?php echo $form->labelEx($archivoRecurso,'fecha_creacion'); ?>
+		<?php echo $form->textField($archivoRecurso,'fecha_creacion'); ?>
+		<?php echo $form->error($archivoRecurso,'fecha_creacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_modificacion'); ?>
-		<?php echo $form->textField($model,'fecha_modificacion'); ?>
-		<?php echo $form->error($model,'fecha_modificacion'); ?>
+		<?php echo $form->labelEx($archivoRecurso,'fecha_modificacion'); ?>
+		<?php echo $form->textField($archivoRecurso,'fecha_modificacion'); ?>
+		<?php echo $form->error($archivoRecurso,'fecha_modificacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_elminacion'); ?>
-		<?php echo $form->textField($model,'fecha_elminacion'); ?>
-		<?php echo $form->error($model,'fecha_elminacion'); ?>
+		<?php echo $form->labelEx($archivoRecurso,'fecha_elminacion'); ?>
+		<?php echo $form->textField($archivoRecurso,'fecha_elminacion'); ?>
+		<?php echo $form->error($archivoRecurso,'fecha_elminacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_acceso'); ?>
-		<?php echo $form->textField($model,'fecha_acceso'); ?>
-		<?php echo $form->error($model,'fecha_acceso'); ?>
+		<?php echo $form->labelEx($archivoRecurso,'fecha_acceso'); ?>
+		<?php echo $form->textField($archivoRecurso,'fecha_acceso'); ?>
+		<?php echo $form->error($archivoRecurso,'fecha_acceso'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($archivoRecurso->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
