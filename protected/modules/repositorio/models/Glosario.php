@@ -117,19 +117,24 @@ class Glosario extends CActiveRecord
         
         public function agregarGlosarioRepositorio(
                 $nuevoRepositorioId,
-                $nuevoGlosarioNombre,
-                $nuevoGlosarioDescripcion                
+                $nuevoGlosario                
         )
         {
-             $command = Yii::app()->db->createCommand("CALL sp_repositorio_agregar_glosario_repositorio_troncal(
+            $nuevoGlosarioId = $nuevoGlosario->id;
+            $nuevoGlosarioNombre = $nuevoGlosario->nombre; 
+            $nuevoGlosarioDescripcion = $nuevoGlosario->descripcion;
+            $nuevoRecursoTabla = $nuevoGlosario->tableSchema->name;
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_agregar_glosario_repositorio_troncal(
                 :nuevoRepositorioId,
                 :nuevoGlosarioNombre,
-                :nuevoGlosarioDescripcion,                
+                :nuevoGlosarioDescripcion,
+                :nuevoRecursoTabla,
                 @last_insert_glosario_id)"
             );     
             $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);
             $command->bindParam(':nuevoGlosarioNombre',$nuevoGlosarioNombre);
             $command->bindParam(':nuevoGlosarioDescripcion',$nuevoGlosarioDescripcion);
+            $command->bindParam(':nuevoRecursoTabla',$nuevoRecursoTabla);
             
             $command->execute();
             $this->lastInsertGlosarioId = Yii::app()->db->createCommand("select @last_insert_glosario_id as result;")->queryScalar();

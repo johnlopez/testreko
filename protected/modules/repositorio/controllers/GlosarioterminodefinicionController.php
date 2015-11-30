@@ -106,9 +106,9 @@ class GlosarioterminodefinicionController extends Controller
                 $glosario = new Glosario();
                 $repositorio = Yii::app()->session['repositorio'];                
                 
-                if(isset($_POST['glosarioId']))
+                if(isset($_GET['glosarioId']))
                 {
-                    $glosario = $glosario->findByPk($_POST['glosarioId']);
+                    $glosario = $glosario->findByPk($_GET['glosarioId']);
                 }
 
 		// Uncomment the following line if AJAX validation is needed

@@ -28,7 +28,7 @@ class GlosarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','agregararchivoglosario','descargararchivoglosario','eliminararchivoglosario'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -67,11 +67,15 @@ class GlosarioController extends Controller
                     $tmp->definicion = $lista['definicion'];
                     $glosarioTerminoDefinicionArray[] = $tmp;
                 }
-                                
+                
+                $glosario = $glosario->findByPk($id);
+                $archivos = Yii::app()->ArchivoComponent->listarArchivo($glosario);
+                                                
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
                         'repositorio'=>$repositorio,
                         'glosarioTerminoDefinicion'=>$glosarioTerminoDefinicionArray,
+                        'archivos'=>$archivos,
                         
 		));
 //		//////////SOLO GlOSARIO///////////////////////////////////////////////////
@@ -105,8 +109,7 @@ class GlosarioController extends Controller
                                    
                     if($modeloGlosario->agregarGlosarioRepositorio(
                             $repositorio->id,
-                            $glosario->nombre,
-                            $glosario->descripcion
+                            $glosario
                     ))
                     {
                         $this->redirect(array('view','id'=>$modeloGlosario->lastInsertGlosarioId));
@@ -158,6 +161,9 @@ class GlosarioController extends Controller
                 $glosarioTerminoDefinicionArray[] = $tmp;
             }
             
+            $glosario = $glosario->findByPk($id);
+            $archivos = Yii::app()->ArchivoComponent->listarArchivo($glosario);
+            
             if(isset($_POST['Glosario']))
 		{
                     echo "hola";
@@ -176,6 +182,7 @@ class GlosarioController extends Controller
                 'glosario'=>$glosario,
                 'repositorio'=>$repositorio,
                 'glosarioTerminoDefinicion'=>$glosarioTerminoDefinicionArray,
+                'archivos'=>$archivos,
             ));
             
                 
@@ -278,4 +285,63 @@ class GlosarioController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionAgregararchivoglosario()
+        {
+            $repositorio = Yii::app()->session['repositorio'];
+
+            $glosario = new Glosario();
+            if(isset($_POST['glosarioId']))
+            {
+                $glosario = $glosario->findByPk($_POST['glosarioId']);
+            }
+            Yii::import('application.models.SubidaArchivoForm');            
+            $model = new SubidaArchivoForm();
+                       
+            if(isset($_POST['Glosario']))
+            {
+                $glosario->id = $_POST['Glosario']['id'];
+                $glosario = $glosario->findByPk($glosario->id);
+
+//                $model->attributes=$_POST['SubidaArchivoForm'];
+                
+                Yii::app()->ArchivoComponent->agregarArchivo($glosario);
+                $this->redirect(array('view','id'=>$glosario->id));
+            }
+            $this->render('agregararchivoglosario',array(
+                        'model'=>$model,
+                        'glosario'=>$glosario,
+                        'repositorio'=>$repositorio,
+            ));
+        }
+        
+        public function actionDescargararchivoglosario()
+        {   
+            Yii::import('application.models.Archivo');
+            $archivo = new Archivo();
+            if(isset($_POST['archivoId']))
+            {
+                $archivo = $archivo->findByPk($_POST['archivoId']);
+                Yii::app()->ArchivoComponent->descargarArchivo($archivo);
+//                if( file_exists( YiiBase::getPathOfAlias('webroot').$archivo->ruta.$archivo->nombre) ){
+//                    Yii::app()->getRequest()->sendFile( $archivo->nombre, file_get_contents(YiiBase::getPathOfAlias('webroot').$archivo->ruta.$archivo->nombre ) );
+//                }
+            }
+        }
+        
+        public function actionEliminararchivoglosario()
+        {
+            Yii::import('application.models.Archivo');
+            $archivo = new Archivo();
+            if(isset($_POST['archivoId'],$_POST['glosarioId']))
+            {
+                $archivo = $archivo->findByPk($_POST['archivoId']);
+//                var_dump($archivo);
+                echo Yii::app()->ArchivoComponent->eliminarArchivo($archivo);
+                $this->redirect(array('update','id'=>$_POST['glosarioId']));
+//                unlink(Yii::getPathOfAlias('webroot').$archivo->ruta.$archivo->nombre); 
+            }
+        }
+        
+       
 }

@@ -42,12 +42,17 @@ return array(
                     'class' => 'system.web.CDbHttpSession',
                     'connectionID' => 'db',
                     'sessionTableName' => 'reko_session',
+                    'timeout' => 3600*24*30,
+
                 ),
                 'Validar' => array(
                     'class'=>'application.components.Validar',
                 ),
                 'InstitucionComponent'=>array(
                     "class"=>'application.components.InstitucionComponent',
+                ),
+                'ArchivoComponent'=>array(
+                    "class"=>'application.components.ArchivoComponent',
                 ),
                 'authManager'=>array(
                     "class"=>"CDbAuthManager",
@@ -111,5 +116,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+                'rutaArchivos'=>'C:/wamp/www/testreko',//Yii::app()->params[$rutaArchivos];
 	),
 );

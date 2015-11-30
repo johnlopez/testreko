@@ -22,4 +22,20 @@
             </button>
     </form>   
 
+<<<<<<< HEAD
 <?php endforeach;?>
+=======
+<p>
+This is the view content for action "<?php echo $this->action->id; ?>".
+The action belongs to the controller "<?php echo get_class($this); ?>"
+in the "<?php echo $this->module->id; ?>" module.
+</p>
+<p>
+You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
+</p>
+
+hola
+<?php 
+echo Yii::app()->user->id ;
+?>
+>>>>>>> 91d835683f603eb67e8173ab3fd7ad2b60434f24
