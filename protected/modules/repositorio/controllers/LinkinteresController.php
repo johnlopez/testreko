@@ -28,7 +28,7 @@ class LinkinteresController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','admin'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -62,7 +62,8 @@ class LinkinteresController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new LinkInteres;
+		$model = new LinkInteres;
+                $repositorio = Yii::app()->session['repositorio'];
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,8 +71,17 @@ class LinkinteresController extends Controller
 		if(isset($_POST['LinkInteres']))
 		{
 			$model->attributes=$_POST['LinkInteres'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->agregarLinkInteres(
+                                $repositorio->id,
+                                $model->titulo,
+                                $model->nombre,
+                                $model->url,
+                                $model->descripcion                      
+                        ))
+                            
+                        
+                        $this->redirect(array('view','id' => $model->lastInsertLinkId));
+                        
 		}
 
 		$this->render('create',array(
@@ -87,6 +97,7 @@ class LinkinteresController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+                $repositorio = Yii::app()->session['repositorio'];
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -94,8 +105,18 @@ class LinkinteresController extends Controller
 		if(isset($_POST['LinkInteres']))
 		{
 			$model->attributes=$_POST['LinkInteres'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->modificarLinkInteres(
+                                $model->id,
+                                $repositorio->id,
+                                $model->titulo,
+                                $model->nombre,
+                                $model->url,
+                                $model->descripcion 
+                                
+                        ))
+                                
+                        $this->redirect(array('view','id' => $model->lastInsertLinkId));
+				
 		}
 
 		$this->render('update',array(
@@ -137,9 +158,12 @@ class LinkinteresController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['LinkInteres']))
 			$model->attributes=$_GET['LinkInteres'];
+                
+                $listadoLink = LinkInteres::model()->findAll(); 
 
 		$this->render('admin',array(
 			'model'=>$model,
+                        'listadoLink' => $listadoLink,
 		));
 	}
 

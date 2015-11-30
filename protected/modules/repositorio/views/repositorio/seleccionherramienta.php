@@ -45,7 +45,7 @@ foreach($herramientasDisponibles as $herramienta):?>
     <?php endif;?>
 
     <?php if(1 == $herramienta['link_interes']):;?>
-    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/site/seleccioninstitucion";?>" method="post">
+    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/repositorio/linkinteres/admin";?>" method="post">
         <input type="hidden" name="institucion[]" value='<?php echo serialize($herramienta);?>' />
             <button class="tile-wide bg-darkGreen fg-white" data-role="tile" type="submit">
             <div class="tile-content iconic">

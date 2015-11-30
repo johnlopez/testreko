@@ -93,4 +93,43 @@ class Aula extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function listarRolesPorUsuario($id) {
+          
+            $comando = Yii::app()->db->createCommand("CALL sp_aula_listar_roles_por_usuario(:nuevoId)");
+            $comando->bindParam(':nuevoId', $id);
+            return $comando->queryAll();
+        }
+        
+        public function listarProgramasPorRol($id,$id2) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_aula_listar_programas_por_rol(:nuevoId,:id_usuario)");
+            $comando->bindParam(':nuevoId', $id);
+            $comando->bindParam(':id_usuario', $id2);
+            return $comando->queryAll();
+        }
+        
+        public function listarModulosPorPrograma($id) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_aula_listar_modulos_por_programa(:nuevoId)");
+            $comando->bindParam(':nuevoId', $id);
+            return $comando->queryAll();
+        }
+        
+        public function listarSeccionesPorModulo($id) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_aula_listar_secciones_por_modulo(:nuevoId)");
+            $comando->bindParam(':nuevoId', $id);
+            return $comando->queryAll();
+        }
+        
+         public function listarModulosNoAsignadosAPrograma($idRol,$idUsuario) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_aula_listar_modulos_no_asignados_a_programa(:nuevoIdRol,:nuevoIdUsuario)");
+            $comando->bindParam(':nuevoIdRol', $idRol);
+            $comando->bindParam(':nuevoIdUsuario', $idUsuario);
+            return $comando->queryAll();
+        }
+        
+        
 }

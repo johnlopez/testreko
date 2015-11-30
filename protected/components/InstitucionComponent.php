@@ -59,5 +59,8 @@ class InstitucionComponent extends CApplicationComponent
 //       $this->acreditada = $nuevoInstitucionAcreditada;
 //       $this->fechaInicioAcreditacion = $nuevoInstitucionFechaInicioAcreditacion;
 //       $this->fechaTerminoAcreditacion = $nuevoInstitucionFechaTerminoAcreditacion;
+           
     }  
 } 
+
+        

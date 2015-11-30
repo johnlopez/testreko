@@ -18,41 +18,30 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
+        
+        <div class="row">
+		<?php echo $form->labelEx($model,'titulo'); ?>
+		<?php echo $form->textField($model,'titulo',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'titulo'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
+        
+        <div class="row">
+                <?php $url = 'https://'?>
+		<?php echo $form->labelEx($model,'url'); ?>
+		<?php echo $form->textField($model,'url',array('size'=>45,'maxlength'=>45,'value'=>$url)); ?>
+		<?php echo $form->error($model,'url'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'descripcion'); ?>
 		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'descripcion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_creacion'); ?>
-		<?php echo $form->textField($model,'fecha_creacion'); ?>
-		<?php echo $form->error($model,'fecha_creacion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_modificacion'); ?>
-		<?php echo $form->textField($model,'fecha_modificacion'); ?>
-		<?php echo $form->error($model,'fecha_modificacion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_elminacion'); ?>
-		<?php echo $form->textField($model,'fecha_elminacion'); ?>
-		<?php echo $form->error($model,'fecha_elminacion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_acceso'); ?>
-		<?php echo $form->textField($model,'fecha_acceso'); ?>
-		<?php echo $form->error($model,'fecha_acceso'); ?>
 	</div>
 
 	<div class="row buttons">

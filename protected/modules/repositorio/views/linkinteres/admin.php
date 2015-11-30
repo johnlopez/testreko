@@ -1,15 +1,15 @@
 <?php
-/* @var $this LinkinteresController */
-/* @var $model LinkInteres */
+/* @var $this UsuarioController */
+/* @var $model Usuario */
 
 $this->breadcrumbs=array(
-	'Link Interes'=>array('index'),
+	'Usuarios'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List LinkInteres', 'url'=>array('index')),
-	array('label'=>'Create LinkInteres', 'url'=>array('create')),
+	array('label'=>'List link de interes', 'url'=>array('index')),
+	array('label'=>'Create link de interes', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#link-interes-grid').yiiGridView('update', {
+	$('#usuario-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,36 +26,83 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Link Interes</h1>
+<h2>link de interes</h2>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+<script type="text/javascript" language="javascript" class="init">
+$(document).ready(function() {
+	$('#main_table_demo').DataTable();
+} );
+</script>
+<div class="container">
+    <section>
+        <table id="main_table_demo" class="display cell-hovered hovered striped" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TITULO</th>
+                    <th>NOMBRE</th>
+                    <th>URL</th>
+                    <th>DESCRIPCION</th>
+                    <th>FECHA CREACION</th>
+                    <th>FECHA MODIFICACION</th>
+                    <th>FECHA ACCESO</th>
+                    <th>TIPO DE HERRAMIENTA</th>
+                    <th>OPCIONES</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($listadoLink as $link):?>                                                     
+                    <tr>
+                        <td><?php echo $link['id'] ?></td>
+                        <td><?php echo $link['titulo'] ?></td>
+                        <td><?php echo $link['nombre'] ?></td>
+                        <td><?php echo $link['url'] ?></td>
+                        <td><?php echo $link['descripcion']?></td>
+                        <td><?php echo $link['fecha_creacion']?></td>
+                        <td><?php echo $link['fecha_modificacion']?></td>
+                        <td><?php echo $link['fecha_acceso']?></td>
+                        <td><?php echo $link['tipo_herramienta_id']?></td>
+       
+                        <td>                                        
+                            <?php 
+                            // http://www.v09studio.com/websystems/materials/forms.html
+                            // pagina html post url form button
+                            ?>                                        
+                            <div id="button-group-1">
+                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/linkinteres/view" method="get">
+                                    <input type="hidden" name="id" value="<?php echo $link['id']?>" />
+                                    <button class="toolbar-button bg-white bg-active-grayLighter fg-black" type="submit">
+                                        <span class="icon mif-search">
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'link-interes-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
-		'nombre',
-		'descripcion',
-		'fecha_creacion',
-		'fecha_modificacion',
-		'fecha_elminacion',
-		/*
-		'fecha_acceso',
-		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>
+                                        </span>
+                                    </button>
+                                </form>
+                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/linkinteres/update" method="get">
+                                    <input type="hidden" name="id" value="<?php echo $link['id']?>" />
+                                    <button class="toolbar-button bg-white bg-active-grayLighter fg-black" type="submit">
+                                        <span class="icon mif-pencil">
+
+                                        </span>
+                                    </button>
+                                </form>
+                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/admin_usuario/usuario/borrar" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $link['id']?>" />
+                                    <button class="toolbar-button bg-white bg-active-grayLighter fg-black" type="submit">
+                                        <span class="icon mif-cancel">
+
+                                        </span>
+                                    </button>
+                                </form> 
+                            </div>                                        
+                        </td>
+                    </tr>
+                <?php endforeach;?>                                
+            </tbody>
+        </table>
+        <ul class="tabs">
+                <li class="active"></li>                        
+        </ul>               
+    </section>
+</div>
+
