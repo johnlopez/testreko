@@ -111,6 +111,9 @@ class SiteController extends Controller
 //                                $this->redirect(array("escritorio_usuario/escritoriousuario/index"));
 				$this->redirect(Yii::app()->user->returnUrl);
                             }
+                            elseif($contador == 0 ){
+                                $this->redirect(array("usuariosininstitucion"));
+                            }
                             else{
 //                              echo "Usted registra mas de una Institucion porfavor seleccione una";
                                 $this->redirect(array("seleccioninstitucion",'listaInstituciones'=>$listaInstituciones));
@@ -155,6 +158,11 @@ class SiteController extends Controller
                 $this->redirect(array("escritorio_usuario/escritoriousuario/index"));
                 }            
             }
+        }
+        
+        public function actionUsuariosininstitucion()
+        {
+            $this->render('usuariosininstitucion');
         }
         
 }
