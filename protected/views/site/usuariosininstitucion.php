@@ -1,0 +1,2 @@
+<h1>Usted no registra o pertenece a una Institucion</h1>
+<div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
