@@ -42,7 +42,6 @@ return array(
                     'class' => 'system.web.CDbHttpSession',
                     'connectionID' => 'db',
                     'sessionTableName' => 'reko_session',
-                    'timeout' => 3600*24*30,
 
                 ),
                 'Validar' => array(

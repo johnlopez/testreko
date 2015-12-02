@@ -115,7 +115,7 @@ class LinkinteresController extends Controller
                                 
                         ))
                                 
-                        $this->redirect(array('view','id' => $model->lastInsertLinkId));
+                        $this->redirect(array('view','id' => $model->id));
 				
 		}
 
