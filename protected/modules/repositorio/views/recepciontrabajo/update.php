@@ -4,18 +4,18 @@
 
 $this->breadcrumbs=array(
 	'Recepcion Trabajos'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
+	$recepcionTrabajo->id=>array('view','id'=>$recepcionTrabajo->id),
 	'Update',
 );
 
 $this->menu=array(
 	array('label'=>'List RecepcionTrabajo', 'url'=>array('index')),
 	array('label'=>'Create RecepcionTrabajo', 'url'=>array('create')),
-	array('label'=>'View RecepcionTrabajo', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'View RecepcionTrabajo', 'url'=>array('view', 'id'=>$recepcionTrabajo->id)),
 	array('label'=>'Manage RecepcionTrabajo', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update RecepcionTrabajo <?php echo $model->id; ?></h1>
+<h1>Update RecepcionTrabajo <?php echo $recepcionTrabajo->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('recepcionTrabajo'=>$recepcionTrabajo)); ?>
