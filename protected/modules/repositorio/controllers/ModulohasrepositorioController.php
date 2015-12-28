@@ -14,6 +14,23 @@ class ModulohasrepositorioController extends Controller
                     $moduloId = $_GET['moduloId'];
                 }
                 
+                // Llamando a la tabla de copia de archivos --------------------
+                if(isset($_GET['listadoAsignarRepositorio'])){
+                    $listaRepositorioId = Array();
+                    var_dump($_GET['listadoAsignarRepositorio']);
+//                    $archivos = Yii::app()->ArchivoComponent->listaArchivosCopiaRepositorio($_GET['listadoAsignarRepositorio']);
+                    $listaRepositorioId = $_GET['listadoAsignarRepositorio'];
+                    $archivos = Yii::app()->ArchivoComponent->listaArchivosCopiaRepositorio($listaRepositorioId);
+                    //var_dump($archivos);
+                    foreach($archivos as $archivo)
+                    {
+                        echo $archivo['nombre_old']."<br>";
+                    }
+                    
+                    Yii::app()->ArchivoComponent->agregarArchivoCopiaRepositorio($archivos);
+                }                
+                // Llamando a la tabla de copia de archivos---------------------
+                
                 $listado = $modelo->listaModuloRepositorio($moduloId);
                 
                 foreach($listado as $item){
@@ -66,8 +83,9 @@ class ModulohasrepositorioController extends Controller
                         }
                 }
 
-                if( count($listadoAsignarRepositorio) )
-                    $repositorio_modulo->asignaRepositorioModulo($listadoAsignarRepositorio, $moduloId);           
+                if( count($listadoAsignarRepositorio) ){
+                    $repositorio_modulo->asignaRepositorioModulo($listadoAsignarRepositorio, $moduloId);                               
+                }
 
                 if( count( $listadoDesAsignarRepositorio) )
                     $repositorio_modulo->desasignaInstitucionRepositorio($listadoDesAsignarRepositorio, $moduloId);        
@@ -77,7 +95,10 @@ class ModulohasrepositorioController extends Controller
             }
 
 
-            $this->redirect(array("asignarrepositoriomodulo",'moduloId'=>$moduloId));
+            $this->redirect(array("asignarrepositoriomodulo",
+                                'moduloId'=>$moduloId,
+                                'listadoAsignarRepositorio'=>$listadoAsignarRepositorio,
+            ));
 
         }
 
