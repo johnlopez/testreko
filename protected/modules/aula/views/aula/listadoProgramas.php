@@ -35,8 +35,11 @@
     foreach ($listadoModulosNoAsignados as $modulo): 
 ?>
   
-    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/aula/aula/listadoSecciones";?>" method="post">
-       <input type="hidden" name="idModulo" value='<?php echo $modulo['id'];?>' />
+    <form class="place-left" action="<?php 
+//    echo Yii::app()->getBaseUrl()."/aula/aula/listadoSecciones";
+    echo Yii::app()->getBaseUrl()."/aula/modulo/listadorepositorios";
+    ?>" method="post">
+       <input type="hidden" name="moduloId" value='<?php echo $modulo['id'];?>' />
             <button class="tile-wide bg-darkGreen fg-white" data-role="tile" type="submit">
                 <div class="tile-content iconic">
                     <span class="icon mif-spell-check"></span>

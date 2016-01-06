@@ -124,4 +124,11 @@ class ModuloHasRepositorio extends CActiveRecord
             $resultado = $command->execute();        
             return $resultado;
         }
+        
+        public function listaModuloRepositorioAula($nuevoModuloId) {        
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_lista_modulo_repositorio_aula(:nuevoModuloId)");
+            $command->bindParam(':nuevoModuloId',$nuevoModuloId);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+        }
 }

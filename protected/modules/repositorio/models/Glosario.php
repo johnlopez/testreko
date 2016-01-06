@@ -166,6 +166,14 @@ class Glosario extends CActiveRecord
             return $command;
         }
         
+        public function listaGlosarioRepositorioAula($nuevoRepositorioId,$nuevoModuloId) {        
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_lista_glosario_repositorio_aula(:nuevoRepositorioId,:nuevoModuloId)");
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);	
+            $command->bindParam(':nuevoModuloId',$nuevoModuloId);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+        }
+        
         
         
 }

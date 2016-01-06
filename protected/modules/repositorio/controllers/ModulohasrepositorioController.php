@@ -14,23 +14,6 @@ class ModulohasrepositorioController extends Controller
                     $moduloId = $_GET['moduloId'];
                 }
                 
-                // Llamando a la tabla de copia de archivos --------------------
-                if(isset($_GET['listadoAsignarRepositorio'])){
-                    $listaRepositorioId = Array();
-                    var_dump($_GET['listadoAsignarRepositorio']);
-//                    $archivos = Yii::app()->ArchivoComponent->listaArchivosCopiaRepositorio($_GET['listadoAsignarRepositorio']);
-                    $listaRepositorioId = $_GET['listadoAsignarRepositorio'];
-                    $archivos = Yii::app()->ArchivoComponent->listaArchivosCopiaRepositorio($listaRepositorioId);
-                    //var_dump($archivos);
-                    foreach($archivos as $archivo)
-                    {
-                        echo $archivo['nombre_old']."<br>";
-                    }
-                    
-                    Yii::app()->ArchivoComponent->agregarArchivoCopiaRepositorio($archivos);
-                }                
-                // Llamando a la tabla de copia de archivos---------------------
-                
                 $listado = $modelo->listaModuloRepositorio($moduloId);
                 
                 foreach($listado as $item){
@@ -84,11 +67,24 @@ class ModulohasrepositorioController extends Controller
                 }
 
                 if( count($listadoAsignarRepositorio) ){
-                    $repositorio_modulo->asignaRepositorioModulo($listadoAsignarRepositorio, $moduloId);                               
+                    $repositorio_modulo->asignaRepositorioModulo($listadoAsignarRepositorio, $moduloId);
+// Llamando a la tabla de copia de archivos ------------------------------------
+//                    if(isset($_GET['listadoAsignarRepositorio'])){
+//                        $listaRepositorioId = Array();
+    //                    var_dump($_GET['listadoAsignarRepositorio']);
+    //                    $archivos = Yii::app()->ArchivoComponent->listaArchivosCopiaRepositorio($_GET['listadoAsignarRepositorio']);
+//                        $listaRepositorioId = $_GET['listadoAsignarRepositorio'];
+                        $archivos = Yii::app()->ArchivoComponent->listaArchivosCopiaRepositorio($listadoAsignarRepositorio);
+                        //var_dump($archivos);
+    //                    foreach($archivos as $archivo)
+    //                    {echo $archivo['nombre_old']."<br>";}
+                        Yii::app()->ArchivoComponent->agregarArchivoCopiaRepositorio($archivos);
+//                    }                
+// Llamando a la tabla de copia de archivos ------------------------------------
                 }
 
                 if( count( $listadoDesAsignarRepositorio) )
-                    $repositorio_modulo->desasignaInstitucionRepositorio($listadoDesAsignarRepositorio, $moduloId);        
+                    $repositorio_modulo->desasignaModuloRepositorio($listadoDesAsignarRepositorio, $moduloId);        
             }
             else{
                 $repositorio_modulo->desasignaModuloRepositorio($listadoOriginal,$moduloId);                

@@ -23,10 +23,9 @@ class RepositorioController extends Controller
                 $repositorioSessions = Yii::app()->session['repositorio'];
                                
                 $herramientasDisponibles = $modeloRepositorio->obtenerHerramientasDisponiblesRepositorio($repositorio->id);                
-                $this->render('seleccionherramienta',
-                        array(
+                $this->render('seleccionherramienta',array(
                             'herramientasDisponibles'=>$herramientasDisponibles,
-                            ));
+                ));
             }           
         }
 
