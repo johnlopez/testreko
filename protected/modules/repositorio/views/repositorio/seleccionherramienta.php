@@ -105,7 +105,7 @@ foreach($herramientasDisponibles as $herramienta):?>
     </form>  
     <?php endif;?>
     <?php if(1 == $herramienta['foro']):;?>
-    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/site/seleccioninstitucion";?>" method="post">
+    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/repositorio/foro/admin";?>" method="post">
         <input type="hidden" name="institucion[]" value='<?php echo serialize($herramienta);?>' />
             <button class="tile-wide bg-darkGreen fg-white" data-role="tile" type="submit">
             <div class="tile-content iconic">

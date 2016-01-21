@@ -115,7 +115,7 @@ class LinkInteres extends CActiveRecord
 		return parent::model($className);
 	}
         
-        public function agregarLinkInteres($titulo,$nombre,$url,$descripcion,$repositorioId)
+        public function agregarLinkInteres($titulo,$nombre,$url,$descripcion,$repositorioId,$recursoTabla)
         {
             $comando = Yii::app()->db->createCommand("CALL sp_repositorio_agregar_link_interes( 
                 :nuevoTitutlo,
@@ -123,6 +123,7 @@ class LinkInteres extends CActiveRecord
                 :nuevoUrl,
                 :nuevoDescripcion,  
                 :nuevoRepositorioId,
+                :nuevoRecursoTabla,
                 @last_insert_link_id)");
             
             $comando->bindParam(':nuevoTitutlo',$titulo);
@@ -130,6 +131,7 @@ class LinkInteres extends CActiveRecord
             $comando->bindParam(':nuevoUrl',$url);
             $comando->bindParam(':nuevoDescripcion',$descripcion);
             $comando->bindParam(':nuevoRepositorioId',$repositorioId);
+            $comando->bindParam(':nuevoRecursoTabla',$recursoTabla);
 
             
             $comando->execute();
@@ -159,6 +161,21 @@ class LinkInteres extends CActiveRecord
             $comando->execute();
             $this->lastInsertLinkId = Yii::app()->db->createCommand("select @last_insert_link_id as result;")->queryScalar();
             
+        }
+        
+        public function eliminarFisicoLink($id) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_repositorio_eliminado_fisico_link_interes(:id)");
+            $comando->bindParam(':id', $id);
+            $comando->execute();
+            return $comando;
+        }
+        
+        public function listarLinkInteresPorRepositorio($idRepositorio) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_repositorio_lista_link_interes(:id)");
+            $comando->bindParam(':id', $idRepositorio);
+            return $comando->queryAll();
         }
         
         

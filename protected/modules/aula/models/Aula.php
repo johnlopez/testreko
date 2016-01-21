@@ -131,5 +131,28 @@ class Aula extends CActiveRecord
             return $comando->queryAll();
         }
         
+        public function listarContratoPorModulo($idModulo) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_admin_curricular_listar_contrato_modulo(:idModulo)");
+            $comando->bindParam(':idModulo', $idModulo);
+            return $comando->queryAll();
+        }
+        
+        public function listarContratoPorPrograma() {
+            
+        }
+        
+        public function aceptarContrato($contratoFichaTecnica,$moduloId,$programaAcademicoId,$usuarioId,$institucionId) {
+            
+            $comando = Yii::app()->db->createCommand("CALL sp_admin_curricular_aceptar_contrato(:contratoFichaTecnica,:moduloId,:programaAcademicoId,:usuarioId,:institucionId)");
+            $comando->bindParam(':contratoFichaTecnica', $contratoFichaTecnica);
+            $comando->bindParam(':moduloId', $moduloId);
+            $comando->bindParam(':programaAcademicoId', $programaAcademicoId);
+            $comando->bindParam(':usuarioId', $usuarioId);
+            $comando->bindParam(':institucionId', $institucionId);
+            $comando->execute();
+        }
+        
+       
         
 }

@@ -28,7 +28,7 @@ class LinkinteresController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','admin'),
+				'actions'=>array('index','view','admin','BorradoFisicoLinkInteres'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -62,7 +62,7 @@ class LinkinteresController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model = new LinkInteres;
+		$model = new LinkInteres();
                 $repositorio = Yii::app()->session['repositorio'];
 
 		// Uncomment the following line if AJAX validation is needed
@@ -76,9 +76,11 @@ class LinkinteresController extends Controller
                                 $model->titulo,
                                 $model->nombre,
                                 $model->url,
-                                $model->descripcion                      
+                                $model->descripcion,
+                                $model->tableSchema->name
                         ))
                             
+                    var_dump($model->lastInsertLinkId);
                         
                         $this->redirect(array('view','id' => $model->lastInsertLinkId));
                         
@@ -115,6 +117,8 @@ class LinkinteresController extends Controller
                                 
                         ))
                                 
+                        var_dump($model->lastInsertLinkId);        
+                                
                         $this->redirect(array('view','id' => $model->id));
 				
 		}
@@ -122,20 +126,6 @@ class LinkinteresController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
-	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
 	/**
@@ -154,12 +144,9 @@ class LinkinteresController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new LinkInteres('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['LinkInteres']))
-			$model->attributes=$_GET['LinkInteres'];
-                
-                $listadoLink = LinkInteres::model()->findAll(); 
+		$model = new LinkInteres();
+                $idRepositorio = Yii::app()->session['repositorio']->id;
+		$listadoLink = $model->listarLinkInteresPorRepositorio($idRepositorio);
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -194,4 +181,15 @@ class LinkinteresController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionBorradoFisicoLinkInteres() {
+            
+            if(isset($_POST['id'])){
+                    $idLink = $_POST['id'];
+                }
+            
+            $model = new LinkInteres();
+            $model->eliminarFisicoLink($idLink);
+            $this->redirect('admin');
+        }
 }

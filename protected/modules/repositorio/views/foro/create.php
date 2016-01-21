@@ -1,18 +1,12 @@
-<?php
-/* @var $this ForoController */
-/* @var $model Foro */
+<div class="place-right padding20 no-padding-top no-padding-right">  
+        <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/foro/admin" >
+            <button class="button primary" type="submit">
+                    Administrar foros
+            </button>
+        </form>          
+</div>
 
-$this->breadcrumbs=array(
-	'Foros'=>array('index'),
-	'Create',
-);
 
-$this->menu=array(
-	array('label'=>'List Foro', 'url'=>array('index')),
-	array('label'=>'Manage Foro', 'url'=>array('admin')),
-);
-?>
-
-<h1>Create Foro</h1>
+<h2>Agregar Foro</h2>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

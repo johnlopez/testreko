@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> Son requeridos.</p>
 
 	<?php echo $form->errorSummary($model); ?>
         
@@ -32,7 +32,7 @@
 	</div>
         
         <div class="row">
-                <?php $url = 'https://'?>
+                <?php $url = $model->url ? :  'https://' ?>
 		<?php echo $form->labelEx($model,'url'); ?>
 		<?php echo $form->textField($model,'url',array('size'=>45,'maxlength'=>45,'value'=>$url)); ?>
 		<?php echo $form->error($model,'url'); ?>
