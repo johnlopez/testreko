@@ -1,4 +1,6 @@
-<h1>Repositorio: <?php echo Yii::app()->session['repositorio']->nombre?></h1>
+<h1>Modulo: <?php echo $modulo->nombre?></h1>
+<div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
+<h1>Repositorio: <?php echo Yii::app()->session['repositorioaula']->nombre?></h1>
 <div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
 <h1>Seleccione Herramienta</h1>
 <div class="progress small" data-value="100" data-color="bg-grayLight" data-role="progressBar"><div class="bar bg-red" style="width: 85%;"></div></div>
@@ -66,8 +68,8 @@ foreach($herramientasDisponibles as $herramienta):?>
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <?php if(1 == $herramienta['glosario']):;?>
-    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/repositorio/glosario/admin";?>" method="post">
-        <input type="hidden" name="herramientaBool" value='<?php echo $herramienta['glosario'];?>' />
+    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/aula/glosario/listadoglosarios";?>" method="post">
+        <input type="hidden" name="moduloId" value='<?php echo $modulo->id;?>' />
             <button class="tile-wide bg-darkGreen fg-white" data-role="tile" type="submit">
             <div class="tile-content iconic">
                 <span class="icon mif-spell-check"></span>
@@ -105,7 +107,7 @@ foreach($herramientasDisponibles as $herramienta):?>
     </form>  
     <?php endif;?>
     <?php if(1 == $herramienta['foro']):;?>
-    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/repositorio/foro/admin";?>" method="post">
+    <form class="place-left" action="<?php echo Yii::app()->getBaseUrl()."/site/seleccioninstitucion";?>" method="post">
         <input type="hidden" name="institucion[]" value='<?php echo serialize($herramienta);?>' />
             <button class="tile-wide bg-darkGreen fg-white" data-role="tile" type="submit">
             <div class="tile-content iconic">

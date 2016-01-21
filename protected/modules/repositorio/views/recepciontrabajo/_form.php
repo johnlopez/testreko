@@ -17,46 +17,52 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($recepcionTrabajo); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'nombre'); ?>
+		<?php echo $form->labelEx($recepcionTrabajo,'nombre'); ?>
+		<?php echo $form->textField($recepcionTrabajo,'nombre',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($recepcionTrabajo,'nombre'); ?>
+	</div>
+        
+        <div class="row">
+		<?php echo $form->labelEx($recepcionTrabajo,'entrega_publica'); ?>
+		<?php echo $form->checkBox($recepcionTrabajo,'entrega_publica'); ?>
+		<?php echo $form->error($recepcionTrabajo,'entrega_publica'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
+		<?php echo $form->labelEx($recepcionTrabajo,'descripcion'); ?>
+		<?php echo $form->textArea($recepcionTrabajo,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($recepcionTrabajo,'descripcion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_creacion'); ?>
-		<?php echo $form->textField($model,'fecha_creacion'); ?>
-		<?php echo $form->error($model,'fecha_creacion'); ?>
+		<?php echo $form->labelEx($recepcionTrabajo,'fecha_creacion'); ?>
+		<?php echo $form->textField($recepcionTrabajo,'fecha_creacion'); ?>
+		<?php echo $form->error($recepcionTrabajo,'fecha_creacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_modifcacion'); ?>
-		<?php echo $form->textField($model,'fecha_modifcacion'); ?>
-		<?php echo $form->error($model,'fecha_modifcacion'); ?>
+		<?php echo $form->labelEx($recepcionTrabajo,'fecha_modificacion'); ?>
+		<?php echo $form->textField($recepcionTrabajo,'fecha_modificacion'); ?>
+		<?php echo $form->error($recepcionTrabajo,'fecha_modificacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_eliminacion'); ?>
-		<?php echo $form->textField($model,'fecha_eliminacion'); ?>
-		<?php echo $form->error($model,'fecha_eliminacion'); ?>
+		<?php echo $form->labelEx($recepcionTrabajo,'fecha_eliminacion'); ?>
+		<?php echo $form->textField($recepcionTrabajo,'fecha_eliminacion'); ?>
+		<?php echo $form->error($recepcionTrabajo,'fecha_eliminacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha_acceso'); ?>
-		<?php echo $form->textField($model,'fecha_acceso'); ?>
-		<?php echo $form->error($model,'fecha_acceso'); ?>
-	</div>
+		<?php echo $form->labelEx($recepcionTrabajo,'fecha_acceso'); ?>
+		<?php echo $form->textField($recepcionTrabajo,'fecha_acceso'); ?>
+		<?php echo $form->error($recepcionTrabajo,'fecha_acceso'); ?>
+	</div>       
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($recepcionTrabajo->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

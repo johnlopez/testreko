@@ -8,12 +8,13 @@
  * @property string $nombre
  * @property string $descripcion
  * @property string $fecha_creacion
- * @property string $fecha_modifcacion
+ * @property string $fecha_modificacion
  * @property string $fecha_eliminacion
  * @property string $fecha_acceso
  */
 class RecepcionTrabajo extends CActiveRecord
 {
+        public $lastInsertRecepcionTrabajoId;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -31,10 +32,10 @@ class RecepcionTrabajo extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nombre', 'length', 'max'=>45),
-			array('descripcion, fecha_creacion, fecha_modifcacion, fecha_eliminacion, fecha_acceso', 'safe'),
+			array('descripcion, fecha_creacion, fecha_modificacion, fecha_eliminacion, fecha_acceso,entrega_publica', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, descripcion, fecha_creacion, fecha_modifcacion, fecha_eliminacion, fecha_acceso', 'safe', 'on'=>'search'),
+			array('id, nombre, descripcion, fecha_creacion, fecha_modificacion, fecha_eliminacion, fecha_acceso, entrega_publica', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,9 +60,10 @@ class RecepcionTrabajo extends CActiveRecord
 			'nombre' => 'Nombre',
 			'descripcion' => 'Descripcion',
 			'fecha_creacion' => 'Fecha Creacion',
-			'fecha_modifcacion' => 'Fecha Modifcacion',
+			'fecha_modificacion' => 'Fecha Modificacion',
 			'fecha_eliminacion' => 'Fecha Eliminacion',
 			'fecha_acceso' => 'Fecha Acceso',
+                        'entrega_publica'=> 'Entrega Publica',
 		);
 	}
 
@@ -87,9 +89,10 @@ class RecepcionTrabajo extends CActiveRecord
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('fecha_creacion',$this->fecha_creacion,true);
-		$criteria->compare('fecha_modifcacion',$this->fecha_modifcacion,true);
+		$criteria->compare('fecha_modificacion',$this->fecha_modificacion,true);
 		$criteria->compare('fecha_eliminacion',$this->fecha_eliminacion,true);
 		$criteria->compare('fecha_acceso',$this->fecha_acceso,true);
+                $criteria->compare('entrega_publica',$this->entrega_publica,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -106,4 +109,63 @@ class RecepcionTrabajo extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        public function agregarRecepcionTrabajoRepositorioTroncal(
+                $nuevoRepositorioId,
+                $nuevoRecepcionTrabajo                
+        )
+        {
+            $nuevoRecepcionTrabajoId = $nuevoRecepcionTrabajo->id;
+            $nuevoRecepcionTrabajoNombre = $nuevoRecepcionTrabajo->nombre; 
+            $nuevoRecepcionTrabajoDescripcion = $nuevoRecepcionTrabajo->descripcion;
+            $nuevoRecepcionTrabajoEntregaPublica = $nuevoRecepcionTrabajo->entrega_publica;
+            $nuevoRecursoTabla = $nuevoRecepcionTrabajo->tableSchema->name;
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_agregar_recepcion_trabajo_repositorio_troncal(
+                :nuevoRepositorioId,
+                :nuevoRecepcionTrabajoNombre,
+                :nuevoRecepcionTrabajoDescripcion,
+                :nuevoRecursoTabla,
+                :nuevoRecepcionTrabajoEntregaPublica,
+                @last_insert_recepcion_trabajo_id)"
+            );     
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);
+            $command->bindParam(':nuevoRecepcionTrabajoNombre',$nuevoRecepcionTrabajoNombre);
+            $command->bindParam(':nuevoRecepcionTrabajoDescripcion',$nuevoRecepcionTrabajoDescripcion);
+            $command->bindParam(':nuevoRecursoTabla',$nuevoRecursoTabla);
+            $command->bindParam(':nuevoRecepcionTrabajoEntregaPublica',$nuevoRecepcionTrabajoEntregaPublica);
+            
+            $command->execute();
+            $this->lastInsertRecepcionTrabajoId = Yii::app()->db->createCommand("select @last_insert_recepcion_trabajo_id as result;")->queryScalar();
+            
+            return $command;
+        }
+        
+        public function listaRecepcionTrabajoRepositorioTroncal($nuevoRepositorioId) {        
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_lista_recepcion_trabajo_repositorio_troncal(:nuevoRepositorioId)");
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+        }
+        public function modificarRecepcionTrabajoRepositorio(
+                    $nuevoRecepcionTrabajoId,
+                    $nuevoRepositorioId,
+                    $nuevoRecepcionTrabajoNombre,
+                    $nuevoRecepcionTrabajoDescripcion
+        )
+        {
+            $command = Yii::app()->db->createCommand("CALL sp_repositorio_modificar_recepcion_trabajo_repositorio_troncal(
+                :nuevoRecepcionTrabajoId,
+                :nuevoRepositorioId,
+                :nuevoRecepcionTrabajoNombre,
+                :nuevoRecepcionTrabajoDescripcion,                
+                @last_insert_recepcion_trabajo_id
+            )");              
+            $command->bindParam(':nuevoRecepcionTrabajoId',$nuevoRecepcionTrabajoId);
+            $command->bindParam(':nuevoRepositorioId',$nuevoRepositorioId);
+            $command->bindParam(':nuevoRecepcionTrabajoNombre',$nuevoRecepcionTrabajoNombre);
+            $command->bindParam(':nuevoRecepcionTrabajoDescripcion',$nuevoRecepcionTrabajoDescripcion);
+            $command->execute();
+            $this->lastInsertRecepcionTrabajoId = Yii::app()->db->createCommand("select @last_insert_recepcion_trabajo_id as result;")->queryScalar();
+
+            return $command;
+        }
 }

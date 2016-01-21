@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'nombre',
+                'entrega_publica',
 		'descripcion',
 		'fecha_creacion',
 		'fecha_modifcacion',

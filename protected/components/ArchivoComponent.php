@@ -140,5 +140,42 @@ class ArchivoComponent extends CApplicationComponent
 
     }
     
+    public function listaArchivosCopiaRepositorio($listaRepositorioId) {  
+            
+            $lista = implode(',', $listaRepositorioId);
+        
+            $command = Yii::app()->db->createCommand("CALL sp_component_listar_archivos_copia_repositorio(:listaRepositorioId)");
+            $command->bindParam(':listaRepositorioId',$lista);	
+            $resultado = $command->queryAll();        
+            return $resultado;       
+    }
+    
+    public function agregarArchivoCopiaRepositorio($nuevoListaArchivos){
+        
+        $institucionNombre = Yii::app()->session['institucionNombre'];
+        foreach($nuevoListaArchivos as $archivo)
+        {
+            $ruta_new = '/reko-archivos/'.$institucionNombre.'/'.'modulo-id-'.$archivo['modulo_id'].'-'.$archivo['modulo_nombre'].'-'.$archivo['modulo_codigo'].'/'.'repositorio-id-'.$archivo['repositorio_id_new'].'/'.$archivo['contenedor_tabla_old'].'/'.$archivo['contenedor_tabla_old'].'-id-'.$archivo['contenedor_id_new'].'/';            
+            $carpeta_new = Yii::getPathOfAlias('webroot').$ruta_new;
+            $destino = $carpeta_new.$archivo['nombre_old'];
+            $origen = Yii::getPathOfAlias('webroot').$archivo['ruta_old'].$archivo['nombre_old'];
+            if(!is_dir($carpeta_new)) // Si no existe la carpeta se crea
+            {
+                mkdir($carpeta_new,0,true);
+                chmod($carpeta_new,0755);
+            }   
+            copy($origen,$destino);
+            $this->agregarArchivoProcedure(
+                    $archivo['nombre_old'],
+                    $archivo['mime_type_old'],
+                    $archivo['tamano_old'],
+                    $ruta_new,
+                    $archivo['usuario_id_old'],
+                    $archivo['contenedor_id_new'],
+                    $archivo['contenedor_tabla_old']
+            );            
+        }        
+    }
+    
 }
 ?>

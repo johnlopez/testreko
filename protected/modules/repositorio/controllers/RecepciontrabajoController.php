@@ -29,7 +29,7 @@ class RecepciontrabajoController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +37,7 @@ class RecepciontrabajoController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -56,27 +56,47 @@ class RecepciontrabajoController extends Controller
 		));
 	}
 
-	/**
+	/** 
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate()
 	{
-		$model=new RecepcionTrabajo;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['RecepcionTrabajo']))
-		{
-			$model->attributes=$_POST['RecepcionTrabajo'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+                $recepcionTrabajo = new RecepcionTrabajo();
+                $repositorio = Yii::app()->session['repositorio'];
+                
+                if(isset($_POST['RecepcionTrabajo']))
+                {
+                    $recepcionTrabajo->attributes = $_POST['RecepcionTrabajo'];
+                    if($recepcionTrabajo->agregarRecepcionTrabajoRepositorioTroncal(
+                                        $repositorio->id,
+                                        $recepcionTrabajo
+                    ))
+                    {
+                        $this->redirect(array('view','id'=>$recepcionTrabajo->lastInsertRecepcionTrabajoId));
+//                        echo $recepcionTrabajo->lastInsertRecepcionTrabajoId;
+                    }
+                }
+                $this->render('create',array(
+                        'recepcionTrabajo'=>$recepcionTrabajo,
+                        'repositorio'=>$repositorio,
+                ));
+                
+//		$model=new RecepcionTrabajo;
+//
+//		// Uncomment the following line if AJAX validation is needed
+//		// $this->performAjaxValidation($model);
+//
+//		if(isset($_POST['RecepcionTrabajo']))
+//		{
+//			$model->attributes=$_POST['RecepcionTrabajo'];
+//			if($model->save())
+//				$this->redirect(array('view','id'=>$model->id));
+//		}
+//
+//		$this->render('create',array(
+//			'model'=>$model,
+//		));
 	}
 
 	/**
@@ -86,21 +106,42 @@ class RecepciontrabajoController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['RecepcionTrabajo']))
-		{
-			$model->attributes=$_POST['RecepcionTrabajo'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+                $recepcionTrabajo = $this->loadModel($id);
+                $repositorio = Yii::app()->session['repositorio'];
+                
+                if(isset($_POST['RecepcionTrabajo']))
+                {
+                    $recepcionTrabajo->attributes = $_POST['RecepcionTrabajo'];
+                    if($recepcionTrabajo->modificarRecepcionTrabajoRepositorio(
+                            $recepcionTrabajo->id,
+                            $repositorio->id,
+                            $recepcionTrabajo->nombre,
+                            $recepcionTrabajo->descripcion
+                    ))
+                    {
+                        $this->redirect(array('view','id'=>$recepcionTrabajo->lastInsertRecepcionTrabajoId));
+                    }
+                }
+                $this->render('update',array(
+                        'recepcionTrabajo'=>$recepcionTrabajo,
+                        'repositorio'=>$repositorio,
+                        
+                ));
+//		$model=$this->loadModel($id);
+//
+//		// Uncomment the following line if AJAX validation is needed
+//		// $this->performAjaxValidation($model);
+//
+//		if(isset($_POST['RecepcionTrabajo']))
+//		{
+//			$model->attributes=$_POST['RecepcionTrabajo'];
+//			if($model->save())
+//				$this->redirect(array('view','id'=>$model->id));
+//		}
+//
+//		$this->render('update',array(
+//			'model'=>$model,
+//		));
 	}
 
 	/**
@@ -133,14 +174,24 @@ class RecepciontrabajoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new RecepcionTrabajo('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['RecepcionTrabajo']))
-			$model->attributes=$_GET['RecepcionTrabajo'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
+                $recepcionTrabajo = new RecepcionTrabajo();
+                $repositorio = Yii::app()->session['repositorio'];
+//                var_dump($repositorio);
+                $recepcionTrabajos = $recepcionTrabajo->listaRecepcionTrabajoRepositorioTroncal($repositorio->id);
+                
+                $this->render('admin',array(
+                        'recepcionTrabajos'=>$recepcionTrabajos,
+                        'repositorio'=>$repositorio,
+                ));
+                
+//		$model=new RecepcionTrabajo('search');
+//		$model->unsetAttributes();  // clear any default values
+//		if(isset($_GET['RecepcionTrabajo']))
+//			$model->attributes=$_GET['RecepcionTrabajo'];
+//
+//		$this->render('admin',array(
+//			'model'=>$model,
+//		));
 	}
 
 	/**
