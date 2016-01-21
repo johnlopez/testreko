@@ -22,11 +22,14 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'nombre',
+		'tema',
 		'descripcion',
+		'conclusion',
+		'leido',
 		'fecha_creacion',
 		'fecha_modificacion',
 		'fecha_eliminacion',
 		'fecha_acceso',
+		'tipo_herramienta_id',
 	),
 )); ?>

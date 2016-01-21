@@ -30,7 +30,7 @@
 <?php endforeach;?>
 <br><br><br><br><br><br>
 
-<br><br><br><br><br><br><h3>Listado de modulos no asignados</h3> <br><br>
+<br><br><br><br><br><br><h3>Listado de modulos que no pertenecen a un programa</h3> <br><br>
 <?php
     foreach ($listadoModulosNoAsignados as $modulo): 
 ?>

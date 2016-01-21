@@ -32,7 +32,7 @@ class AulaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','asignar','listadoProgramas','listadoModulos','listadoSecciones'),
+				'actions'=>array('index','view','asignar','listadoProgramas','listadoModulos','listadoSecciones','listarContrato','aceptarContrato'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -211,4 +211,27 @@ class AulaController extends Controller
             $this->render('listadoSecciones', array('listadoDeSecciones' => $listadoDeSecciones));
         }
         
+        public function actionListarContrato() {
+            
+            if(isset($_POST['idModulo'])){
+               $idModulo = $_POST['idModulo'];
+            }
+            
+            $aula = new Aula();
+            $listarContrato = $aula->listarContratoPorModulo($idModulo);
+            $this->render('listarContrato', array('listarContrato' => $listarContrato,'idModulo' =>$idModulo));
+        }
+        
+        public function actionAceptarContrato() {
+            
+            if(isset($_POST['idModulo'])){
+               $idModulo = $_POST['idModulo'];
+            }
+            
+            
+            $aula = new Aula();
+            $aula->aceptarContrato(1, $idModulo, 0, 248, 1);
+            $this->redirect('listarContrato',array('idModulo' =>$idModulo));
+        }
+     
 }

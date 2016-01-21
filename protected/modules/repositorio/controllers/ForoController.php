@@ -28,7 +28,7 @@ class ForoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','admin','BorradoFisicoForo'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -62,7 +62,8 @@ class ForoController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Foro;
+		$model = new Foro();
+                $repositorio = Yii::app()->session['repositorio'];
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,8 +71,16 @@ class ForoController extends Controller
 		if(isset($_POST['Foro']))
 		{
 			$model->attributes=$_POST['Foro'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->agregarForo(
+                                $repositorio->id,
+                                $model->tema,
+                                $model->descripcion,
+                                $model->conclusion,
+                                $model->tableSchema->name
+                                
+                        ))
+				
+                    $this->redirect(array('view','id'=>$model->lastInsertForoId));
 		}
 
 		$this->render('create',array(
@@ -86,7 +95,8 @@ class ForoController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$model = $this->loadModel($id);
+                $repositorio = Yii::app()->session['repositorio'];
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -94,8 +104,17 @@ class ForoController extends Controller
 		if(isset($_POST['Foro']))
 		{
 			$model->attributes=$_POST['Foro'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->modificarForo(
+                                $model->id,
+                                $repositorio->id,
+                                $model->tema,
+                                $model->descripcion,
+                                $model->conclusion,
+                                $model->tableSchema->name
+                                
+                            ))
+				
+                    $this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(
@@ -133,13 +152,22 @@ class ForoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Foro('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Foro']))
-			$model->attributes=$_GET['Foro'];
+		$model = new Foro();
+                //var_dump($model->getIP());
+                // $ip = Yii::app()->request->userHostAddress;
+                //  echo $ip;
+                //print_r($_SERVER);
+//                echo "REMOTE_ADDR: ".$_SERVER['REMOTE_ADDR']."<br>";
+//                echo "SERVER_NAME: ".$_SERVER['SERVER_NAME']."<br>";
+//                echo "REMOTE_PORT: ".$_SERVER['REMOTE_PORT']."<br>";
+//                echo "HTTP_USER_AGENT: ".$_SERVER['HTTP_USER_AGENT']."<br>";
+//                echo "HTTP_REFERER: ".$_SERVER['HTTP_REFERER']."<br>";
+                $idRepositorio = Yii::app()->session['repositorio']->id;
+		$listadoForos = $model->listarForosPorRepositorio($idRepositorio);
 
 		$this->render('admin',array(
 			'model'=>$model,
+                        'listadoForos' => $listadoForos
 		));
 	}
 
@@ -170,4 +198,15 @@ class ForoController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionBorradoFisicoForo() {
+            
+             if(isset($_POST['id'])){
+                    $idForo = $_POST['id'];
+                }
+                
+                $model = new Foro();
+                $model->eliminarFisicoForo($idForo);
+                $this->redirect('admin');
+        }
 }

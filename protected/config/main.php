@@ -32,6 +32,7 @@ return array(
                 'aula',
                 'repositorio',
                 'escritorio_usuario',
+                'perfil',
 
 		
 	),
@@ -109,6 +110,9 @@ return array(
 //		),
 
 	),
+    
+        //'onException' => array('ErrorHandler', 'handleException'),
+        //'onError' => array('ErrorHandler', 'handleError'),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']

@@ -17,13 +17,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'tema'); ?>
+		<?php echo $form->textArea($model,'tema',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'descripcion'); ?>
 		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'conclusion'); ?>
+		<?php echo $form->textArea($model,'conclusion',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'leido'); ?>
+		<?php echo $form->textField($model,'leido'); ?>
 	</div>
 
 	<div class="row">
@@ -44,6 +54,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'fecha_acceso'); ?>
 		<?php echo $form->textField($model,'fecha_acceso'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'tipo_herramienta_id'); ?>
+		<?php echo $form->textField($model,'tipo_herramienta_id'); ?>
 	</div>
 
 	<div class="row buttons">

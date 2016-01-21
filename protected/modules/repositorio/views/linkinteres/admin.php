@@ -1,30 +1,10 @@
-<?php
-/* @var $this UsuarioController */
-/* @var $model Usuario */
-
-$this->breadcrumbs=array(
-	'Usuarios'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List link de interes', 'url'=>array('index')),
-	array('label'=>'Create link de interes', 'url'=>array('create')),
-);
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#usuario-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
-?>
+<div class="place-right padding20 no-padding-top no-padding-right">  
+        <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/linkinteres/create" >
+            <button class="button primary" type="submit">
+                    Crear Link de interes
+            </button>
+        </form>          
+</div>
 
 <h2>link de interes</h2>
 
@@ -86,7 +66,7 @@ $(document).ready(function() {
                                         </span>
                                     </button>
                                 </form>
-                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/admin_usuario/usuario/borrar" method="post">
+                                <form class="place-left" action="<?php echo Yii::app()->getBaseUrl(); ?>/repositorio/linkinteres/borradoFisicoLinkInteres" method="post">
                                     <input type="hidden" name="id" value="<?php echo $link['id']?>" />
                                     <button class="toolbar-button bg-white bg-active-grayLighter fg-black" type="submit">
                                         <span class="icon mif-cancel">
